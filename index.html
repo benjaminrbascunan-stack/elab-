@@ -239,12 +239,12 @@ footer.pie{padding:56px 0 40px}
   <button class="cerrar" id="cerrarIndice">Cerrar</button>
   <a href="#compuesto"><i>01</i>El compuesto</a>
   <a href="#mecanismo"><i>02</i>Mecanismo</a>
-  <a href="#evidencia"><i>03</i>La evidencia</a>
-  <a href="#investigacion"><i>04</i>Investigación</a>
-  <a href="#manejo"><i>05</i>Conservación</a>
-  <a href="#datos"><i>06</i>Datos del ensayo</a>
-  <a href="#resenas"><i>07</i>Reseñas</a>
-  <a href="#catalogo"><i>08</i>Catálogo</a>
+  <a href="#catalogo"><i>03</i>Catálogo</a>
+  <a href="#evidencia"><i>04</i>La evidencia</a>
+  <a href="#investigacion"><i>05</i>Investigación</a>
+  <a href="#manejo"><i>06</i>Conservación</a>
+  <a href="#datos"><i>07</i>Datos del ensayo</a>
+  <a href="#resenas"><i>08</i>Reseñas</a>
   <a href="#preguntas"><i>09</i>Preguntas</a>
 </div>
 
@@ -252,8 +252,8 @@ footer.pie{padding:56px 0 40px}
   <button class="menu-btn" id="abrirIndice" aria-label="Abrir índice"><span></span><span></span></button>
   <a href="#compuesto">Compuesto</a>
   <a href="#mecanismo">Mecanismo</a>
-  <a href="#evidencia">Evidencia</a>
   <a href="#catalogo">Catálogo</a>
+  <a href="#evidencia">Evidencia</a>
   <a href="#preguntas">Preguntas</a>
   <a class="comprar" href="#catalogo">Comprar</a>
 </nav>
@@ -285,8 +285,8 @@ var ELABO_ACCESO_MIN = 20;
       <nav>
         <a href="#compuesto">Compuesto</a>
         <a href="#mecanismo">Mecanismo</a>
-        <a href="#evidencia">Evidencia</a>
         <a href="#catalogo">Catálogo</a>
+        <a href="#evidencia">Evidencia</a>
         <a class="btn-oscuro" href="#catalogo">COMPRAR</a>
       </nav>
     </div>
@@ -401,8 +401,43 @@ var ELABO_ACCESO_MIN = 20;
         <p class="nota">Comparación de clase y farmacocinética descrita en literatura. No constituye comparación de eficacia: los estudios de cada compuesto tienen diseños, poblaciones y duraciones distintas.</p>
       </section>
 
+      <section class="bloque" id="catalogo">
+        <div class="marca-inline">03 · Catálogo</div>
+        <h2>Dos presentaciones y el agua bacteriostática.</h2>
+        <p class="intro">Mismo compuesto y misma pureza en ambos viales. Solo cambia el contenido en miligramos. El agua bacteriostática se vende por separado.</p>
+        <div class="catalogo">
+          <div class="item">
+            <figure class="foto foto-ancho"><div class="frasco"></div><figcaption>[Fotografía · E-10]</figcaption></figure>
+            <div class="etiqueta">Compuesto</div>
+            <h3>ELABÓ · E-10</h3>
+            <p class="desc">Vial de 10 mg en polvo liofilizado. Pureza superior al 99% por HPLC, con certificado de análisis del lote.</p>
+            <div class="item-datos"><span class="dato-sec">Contenido</span><span class="dato">10 mg</span></div>
+            <div class="item-datos"><span class="dato-sec">Precio</span><span class="dato" data-cfg="p10Precio"></span></div>
+            <a class="btn-linea" href="#">AGREGAR AL CARRO</a>
+          </div>
+          <div class="item">
+            <figure class="foto foto-ancho"><div class="frasco"></div><figcaption>[Fotografía · E-20]</figcaption></figure>
+            <div class="etiqueta">Compuesto</div>
+            <h3>ELABÓ · E-20</h3>
+            <p class="desc">Vial de 20 mg en polvo liofilizado. Mismo lote de origen y misma pureza que la presentación de 10 mg.</p>
+            <div class="item-datos"><span class="dato-sec">Contenido</span><span class="dato">20 mg</span></div>
+            <div class="item-datos"><span class="dato-sec">Precio</span><span class="dato" data-cfg="p20Precio"></span></div>
+            <a class="btn-linea" href="#">AGREGAR AL CARRO</a>
+          </div>
+          <div class="item">
+            <figure class="foto foto-ancho"><div class="frasco"></div><figcaption>[Fotografía · A-01]</figcaption></figure>
+            <div class="etiqueta">Complemento</div>
+            <h3>ELABÓ · <span data-cfg="actNombreCorto"></span></h3>
+            <p class="desc">Agua bacteriostática estéril. Se vende por separado y no se incluye con el compuesto.</p>
+            <div class="item-datos"><span class="dato-sec">Volumen</span><span class="dato" data-cfg="actVolumen"></span></div>
+            <div class="item-datos"><span class="dato-sec">Desde</span><span class="dato" data-cfg="actPrecio"></span></div>
+            <a class="btn-linea" href="#">VER OPCIONES</a>
+          </div>
+        </div>
+      </section>
+
       <section class="bloque" id="evidencia">
-        <div class="marca-inline">03 · La evidencia</div>
+        <div class="marca-inline">04 · La evidencia</div>
         <h2>Qué dice la literatura y qué no dice.</h2>
         <p class="intro">La evidencia disponible corresponde a investigación clínica en curso. Un compuesto puede tener respaldo publicado en un aspecto y ninguno en otro, y esa distinción es el dato más relevante antes de cualquier decisión.</p>
         <div class="evidencia">
@@ -443,7 +478,7 @@ var ELABO_ACCESO_MIN = 20;
       </section>
 
       <section class="bloque" id="investigacion">
-        <div class="marca-inline">04 · Áreas de investigación</div>
+        <div class="marca-inline">05 · Áreas de investigación</div>
         <h2>Cuatro líneas descritas en la literatura.</h2>
         <div class="areas">
           <div class="area"><div class="n">01</div><h3>Composición corporal</h3><p>Tejido adiposo visceral, masa magra y efectos asociados al triple agonismo.</p></div>
@@ -454,7 +489,7 @@ var ELABO_ACCESO_MIN = 20;
       </section>
 
       <section class="bloque" id="manejo">
-        <div class="marca-inline">05 · Conservación</div>
+        <div class="marca-inline">06 · Conservación</div>
         <h2>El liofilizado es estable, la solución no.</h2>
         <p class="intro">Condiciones de conservación del producto cerrado, según la información del proveedor.</p>
         <div class="cuidados">
@@ -469,7 +504,7 @@ var ELABO_ACCESO_MIN = 20;
       </section>
 
       <section class="bloque" id="datos">
-        <div class="marca-inline">06 · Datos del ensayo</div>
+        <div class="marca-inline">07 · Datos del ensayo</div>
         <h2>Fase 2, 338 participantes, 48 semanas.</h2>
         <p class="intro">Referencia: Jastreboff et al., The New England Journal of Medicine, 2023. Ensayo clínico aleatorizado y controlado.</p>
         <table class="tabla">
@@ -487,7 +522,7 @@ var ELABO_ACCESO_MIN = 20;
       </section>
 
       <section class="bloque" id="resenas">
-        <div class="marca-inline">07 · Reseñas</div>
+        <div class="marca-inline">08 · Reseñas</div>
         <h2>Compra verificada, sin selección.</h2>
         <p class="intro">Se publican todas las reseñas de compradores verificados, incluidas las negativas. Sin edición y sin orden por puntaje.</p>
         <div class="resenas">
@@ -497,40 +532,6 @@ var ELABO_ACCESO_MIN = 20;
         </div>
       </section>
 
-      <section class="bloque" id="catalogo">
-        <div class="marca-inline">08 · Catálogo</div>
-        <h2>Dos presentaciones y el agua bacteriostática.</h2>
-        <p class="intro">Mismo compuesto y misma pureza en ambos viales. Solo cambia el contenido en miligramos. El agua bacteriostática se vende por separado.</p>
-        <div class="catalogo">
-          <div class="item">
-            <figure class="foto foto-ancho"><div class="frasco"></div><figcaption>[Fotografía · E-10]</figcaption></figure>
-            <div class="etiqueta">Compuesto</div>
-            <h3>ELABÓ · E-10</h3>
-            <p class="desc">Vial de 10 mg en polvo liofilizado. Pureza superior al 99% por HPLC, con certificado de análisis del lote.</p>
-            <div class="item-datos"><span class="dato-sec">Contenido</span><span class="dato">10 mg</span></div>
-            <div class="item-datos"><span class="dato-sec">Precio</span><span class="dato" data-cfg="p10Precio"></span></div>
-            <a class="btn-linea" href="#">AGREGAR AL CARRO</a>
-          </div>
-          <div class="item">
-            <figure class="foto foto-ancho"><div class="frasco"></div><figcaption>[Fotografía · E-20]</figcaption></figure>
-            <div class="etiqueta">Compuesto</div>
-            <h3>ELABÓ · E-20</h3>
-            <p class="desc">Vial de 20 mg en polvo liofilizado. Mismo lote de origen y misma pureza que la presentación de 10 mg.</p>
-            <div class="item-datos"><span class="dato-sec">Contenido</span><span class="dato">20 mg</span></div>
-            <div class="item-datos"><span class="dato-sec">Precio</span><span class="dato" data-cfg="p20Precio"></span></div>
-            <a class="btn-linea" href="#">AGREGAR AL CARRO</a>
-          </div>
-          <div class="item">
-            <figure class="foto foto-ancho"><div class="frasco"></div><figcaption>[Fotografía · A-01]</figcaption></figure>
-            <div class="etiqueta">Complemento</div>
-            <h3>ELABÓ · <span data-cfg="actNombreCorto"></span></h3>
-            <p class="desc">Agua bacteriostática estéril. Se vende por separado y no se incluye con el compuesto.</p>
-            <div class="item-datos"><span class="dato-sec">Volumen</span><span class="dato" data-cfg="actVolumen"></span></div>
-            <div class="item-datos"><span class="dato-sec">Desde</span><span class="dato" data-cfg="actPrecio"></span></div>
-            <a class="btn-linea" href="#">VER OPCIONES</a>
-          </div>
-        </div>
-      </section>
 
       <section class="bloque" id="preguntas">
         <div class="marca-inline">09 · Preguntas</div>
@@ -666,7 +667,7 @@ var CONFIG = {
   var escala = document.getElementById('escala');
   var cuerpo = escala.parentElement;
   var secciones = Array.prototype.slice.call(cuerpo.querySelectorAll('section.bloque'));
-  var nombres = ['01 El compuesto','02 Mecanismo','03 La evidencia','04 Investigación','05 Conservación','06 Datos del ensayo','07 Reseñas','08 Catálogo','09 Preguntas'];
+  var nombres = ['01 El compuesto','02 Mecanismo','03 Catálogo','04 La evidencia','05 Investigación','06 Conservación','07 Datos del ensayo','08 Reseñas','09 Preguntas'];
   var marcas = [];
 
   function escalar(){

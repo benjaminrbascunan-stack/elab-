@@ -15,6 +15,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
+html,body{overflow-x:hidden}
 body{background:var(--blanco);color:var(--negro);font-family:Archivo,sans-serif;font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased;padding-bottom:66px}
 svg{display:block}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
@@ -86,12 +87,13 @@ nav a:hover{color:var(--negro)}
   transition:color .3s ease,font-size .3s ease,letter-spacing .3s ease}
 .marca-seccion.activa b{width:32px;height:2px;background:var(--negro)}
 .marca-seccion.activa em{color:var(--negro);font-size:13px;letter-spacing:.1em}
-.secciones{padding-left:180px}
+.secciones{padding-left:216px}
 
 section.bloque{padding:72px 0;border-bottom:.5px solid var(--borde);scroll-margin-top:96px}
 .bloque h2{font-size:30px;line-height:1.15;font-weight:400;letter-spacing:-.01em;max-width:24ch}
 .bloque .intro{color:var(--gris-medio);margin-top:14px;max-width:60ch}
 .marca-inline{font-size:10px;letter-spacing:.14em;color:var(--tenue);text-transform:uppercase;margin-bottom:14px}
+@media (min-width:901px){ .marca-inline{display:none} }
 
 .foto-panoramica{aspect-ratio:16/9;margin-top:38px}
 .pie-foto{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--tenue);margin-top:10px}
@@ -196,7 +198,7 @@ footer.pie{padding:56px 0 40px}
 
 /* --- ritmo: sección a sangre --- */
 .sangre{position:relative}
-.sangre::before{content:"";position:absolute;top:0;bottom:0;left:50%;transform:translateX(-50%);width:100vw;background:var(--superficie);z-index:0}
+.sangre::before{content:"";position:absolute;top:0;bottom:0;left:-100vw;right:-100vw;background:var(--superficie);z-index:0}
 .sangre > *{position:relative;z-index:1}
 
 /* --- momento de respiro --- */
@@ -230,7 +232,7 @@ footer.pie{padding:56px 0 40px}
   .menu-btn{display:flex}
 }
 @media (max-width:1180px) and (min-width:901px){
-  .secciones{padding-left:132px}
+  .secciones{padding-left:168px}
   .marca-seccion em{font-size:9px}
 }
 

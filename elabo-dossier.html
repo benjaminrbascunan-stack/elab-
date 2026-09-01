@@ -1,0 +1,964 @@
+<!-- @dsCard group="Documentos" viewport="1440x900" name="Dossier de evidencia" subtitle="Retatrutida · documento de referencia con 35 fuentes clasificadas por nivel" -->
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ELABÓ · Dossier de evidencia clínica — Retatrutida (LY3437943)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400&family=Archivo:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --elabo-blanco:#F5F7F8;
+  --elabo-gris-claro:#C7CCD0;
+  --elabo-gris-medio:#6B7278;
+  --elabo-negro:#14171A;
+  --surface-base:#F5F7F8;
+  --surface-oscura:#14171A;
+  --text-primario:#14171A;
+  --text-secundario:#6B7278;
+  --text-sobre-oscuro:#F5F7F8;
+  --text-sobre-oscuro-2:#8C9298;
+  --text-sobre-primario:#F5F7F8;
+  --fill-primario:#14171A;
+  --border-hairline:#D8DCDE;
+  --border-sobre-oscuro:#3A4046;
+  --trazo-hairline:.5px;
+  --peso-unico:400;
+  --track-rotulo:.14em;
+  --track-dato:.14em;
+  --track-codigo:.12em;
+  --medida-corrida:68ch;
+  --transicion-estado:color .18s ease, background .18s ease, border-color .18s ease;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Archivo,sans-serif;font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.volver{position:fixed;top:0;left:0;z-index:80;background:var(--elabo-negro);color:var(--elabo-blanco);
+  padding:15px 26px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;text-decoration:none}
+@media (max-width:900px){
+  .portada{padding:56px 24px 48px!important}
+  .env{grid-template-columns:1fr!important;gap:0!important;padding:0 24px!important}
+  .indice{position:static!important;max-height:none!important}
+}
+</style>
+<style>
+html{scroll-behavior:smooth}
+body{background:var(--surface-base);color:var(--text-primario)}
+.rot{font-size:10px;letter-spacing:var(--track-rotulo);text-transform:uppercase;color:var(--text-secundario)}
+.dato{font-size:12px;letter-spacing:var(--track-dato);text-transform:uppercase}
+.cod{font-size:11px;letter-spacing:var(--track-codigo);text-transform:uppercase;color:var(--text-secundario)}
+/* portada */
+.portada{background:var(--surface-oscura);color:var(--text-sobre-oscuro);padding:88px 112px 72px}
+.portada .marca{margin-bottom:96px}
+.portada h1{font-size:44px;line-height:1.1;font-weight:var(--peso-unico);max-width:24ch}
+.portada .molec{margin-top:20px;font-size:15px;letter-spacing:var(--track-dato);text-transform:uppercase;color:var(--text-sobre-oscuro)}
+.portada .mec{margin-top:8px;color:var(--text-sobre-oscuro-2);max-width:56ch}
+.portada .meta{margin-top:64px;display:grid;grid-template-columns:repeat(4,minmax(0,180px));gap:28px 32px;border-top:var(--trazo-hairline) solid var(--border-sobre-oscuro);padding-top:20px}
+.portada .meta .k{font-size:10px;letter-spacing:var(--track-rotulo);text-transform:uppercase;color:var(--text-sobre-oscuro-2);display:block;margin-bottom:7px}
+.portada .meta .v{font-size:12px;letter-spacing:var(--track-dato);text-transform:uppercase;color:var(--text-sobre-oscuro)}
+.portada .estado{margin-top:40px;border-left:2px solid var(--elabo-blanco);padding-left:20px;max-width:70ch}
+.portada .estado .t{font-size:11px;letter-spacing:var(--track-dato);text-transform:uppercase;margin-bottom:8px}
+.portada .estado p{color:var(--text-sobre-oscuro-2);font-size:14px}
+/* estructura */
+.env{display:grid;grid-template-columns:240px minmax(0,1fr);gap:72px;padding:0 112px;align-items:start}
+.indice{position:sticky;top:0;padding:56px 0;max-height:100vh;overflow:auto}
+.indice .h{font-size:10px;letter-spacing:var(--track-rotulo);text-transform:uppercase;color:var(--text-secundario);padding-bottom:12px;border-bottom:var(--trazo-hairline) solid var(--elabo-gris-claro)}
+.indice a{display:grid;grid-template-columns:26px 1fr;gap:10px;padding:9px 0;border-bottom:var(--trazo-hairline) solid var(--border-hairline);text-decoration:none;font-size:12px;color:var(--text-secundario);transition:var(--transicion-estado)}
+.indice a:hover{color:var(--text-primario)}
+.indice a span:first-child{font-size:10px;letter-spacing:var(--track-rotulo);color:var(--text-secundario)}
+main{padding:56px 0 120px;max-width:820px}
+section{padding-top:64px}
+section+section{margin-top:64px;border-top:var(--trazo-hairline) solid var(--elabo-gris-claro)}
+h2{font-size:12px;letter-spacing:var(--track-dato);text-transform:uppercase;font-weight:var(--peso-unico);display:grid;grid-template-columns:36px 1fr;gap:10px}
+h2 span{color:var(--text-secundario)}
+h3{font-size:12px;letter-spacing:var(--track-dato);text-transform:uppercase;font-weight:var(--peso-unico);margin:44px 0 14px;color:var(--text-primario)}
+h4{font-size:11px;letter-spacing:var(--track-codigo);text-transform:uppercase;font-weight:var(--peso-unico);margin:28px 0 10px;color:var(--text-secundario)}
+p{max-width:var(--medida-corrida);margin-top:14px}
+h2+p{margin-top:24px}
+ul{list-style:none;display:grid;gap:10px;margin-top:16px;max-width:var(--medida-corrida)}
+li{padding-left:20px;position:relative;color:var(--text-secundario)}
+li:before{content:"";position:absolute;left:0;top:11px;width:9px;height:1px;background:var(--elabo-negro)}
+.t{border-collapse:collapse;width:100%;margin-top:20px}
+.t th,.t td{text-align:left;font-weight:var(--peso-unico);padding:10px 16px 10px 0;border-bottom:var(--trazo-hairline) solid var(--border-hairline);vertical-align:top;font-size:13px}
+.t thead th{font-size:10px;letter-spacing:var(--track-rotulo);text-transform:uppercase;color:var(--text-secundario);border-bottom-color:var(--elabo-gris-claro)}
+.t td.n{letter-spacing:var(--track-dato);text-transform:uppercase;white-space:nowrap}
+.t td.g{color:var(--text-secundario)}
+.t tbody tr.ref td{color:var(--text-secundario)}
+.fuente{margin-top:18px;padding-top:12px;border-top:var(--trazo-hairline) solid var(--border-hairline);font-size:11px;letter-spacing:.02em;color:var(--text-secundario);max-width:var(--medida-corrida);display:grid;gap:6px}
+.fuente .l{display:flex;gap:10px;align-items:baseline}
+.fuente a{color:var(--text-secundario);word-break:break-all}
+.fuente a:hover{color:var(--text-primario)}
+.niv{flex:0 0 auto;width:19px;height:19px;display:inline-flex;align-items:center;justify-content:center;font-size:11px;letter-spacing:.06em;border:var(--trazo-hairline) solid var(--elabo-gris-medio);color:var(--text-secundario);margin-top:1px}
+.niv.a{background:var(--fill-primario);color:var(--text-sobre-primario);border-color:var(--fill-primario)}
+.aviso{margin-top:26px;border-left:2px solid var(--elabo-negro);padding-left:20px;max-width:var(--medida-corrida)}
+.aviso .t2{font-size:11px;letter-spacing:var(--track-dato);text-transform:uppercase;margin-bottom:6px}
+.aviso p{margin-top:0;color:var(--text-secundario)}
+.bloque{margin-top:26px;border:var(--trazo-hairline) solid var(--border-hairline);padding:26px}
+.bloque .t2{font-size:11px;letter-spacing:var(--track-dato);text-transform:uppercase;margin-bottom:10px}
+.bloque p{margin-top:10px}
+.bloque p:first-of-type{margin-top:0}
+.negativo{margin-top:26px;background:var(--surface-oscura);color:var(--text-sobre-oscuro);padding:32px 36px}
+.negativo .t2{font-size:11px;letter-spacing:var(--track-dato);text-transform:uppercase;margin-bottom:14px}
+.negativo p{color:var(--text-sobre-oscuro-2);margin-top:12px}
+.negativo p:first-of-type{margin-top:0}
+.negativo b{color:var(--text-sobre-oscuro)}
+.bib{margin-top:8px}
+.bib .grupo{font-size:11px;letter-spacing:var(--track-dato);text-transform:uppercase;margin:40px 0 4px;padding-bottom:10px;border-bottom:var(--trazo-hairline) solid var(--elabo-gris-claro)}
+.ref{padding:18px 0;border-bottom:var(--trazo-hairline) solid var(--border-hairline);display:grid;grid-template-columns:44px 1fr;gap:16px;max-width:var(--medida-corrida)}
+.ref .num{font-size:11px;letter-spacing:var(--track-codigo);color:var(--text-secundario)}
+.ref .cita{font-size:13px}
+.ref .obra{color:var(--text-secundario);margin-top:4px;font-size:13px}
+.ref .en{margin-top:8px;font-size:11px;letter-spacing:.02em;color:var(--text-secundario)}
+.ref a{color:var(--text-secundario);word-break:break-all;font-size:11px}
+footer{border-top:var(--trazo-hairline) solid var(--elabo-gris-claro);margin:0 112px;padding:32px 0 72px;display:grid;gap:14px;max-width:820px}
+footer p{font-size:12px;color:var(--text-secundario);max-width:var(--medida-corrida)}
+@media(max-width:1100px){.env{grid-template-columns:1fr;gap:0;padding:0 40px}.indice{position:static;max-height:none;padding:40px 0 0}.portada{padding:56px 40px 48px}.portada .meta{grid-template-columns:1fr 1fr}footer{margin:0 40px}h1{font-size:32px}}
+</style></head>
+<body>
+<a class="volver" href="elabo-home.html">← Volver al sitio</a>
+
+<div class="portada">
+  <div class="marca">
+    <svg width="188" height="88" viewBox="0 0 170 80" aria-label="ELABÓ · PÉPTIDOS">
+      <text x="123.5" y="50" text-anchor="end" font-family="Space Grotesk, sans-serif" font-size="44" letter-spacing="3.88" fill="#F5F7F8">ELAB</text>
+      <text x="123.5" y="50" font-family="Space Grotesk, sans-serif" font-size="44" fill="#F5F7F8">O</text>
+      <line x1="128.72" y1="12.512" x2="147.759" y2="2.384" stroke="#F5F7F8" stroke-width="4.004"></line>
+      <text x="2.4" y="68" font-family="Archivo, sans-serif" font-size="11" letter-spacing="13.56" fill="#8C9298">PÉPTIDOS</text>
+    </svg>
+  </div>
+  <div class="rot" style="color:var(--text-sobre-oscuro-2)">Dossier de evidencia clínica</div>
+  <h1>Retatrutida</h1>
+  <div class="molec">LY3437943</div>
+  <div class="cod" style="margin-top:10px;color:var(--text-sobre-oscuro-2)">Versión 2 · alcance restringido a evidencia clínica, analítica y regulatoria</div>
+  <p class="mec">Agonista triple de los receptores GIP, GLP-1 y glucagón. Revisión de la evidencia publicada, casos clínicos documentados y estado regulatorio.</p>
+  <div class="meta">
+    <div><span class="k">Fecha de corte</span><span class="v">31 AGO 2026</span></div>
+    <div><span class="k">Referencias</span><span class="v">43 fuentes</span></div>
+    <div><span class="k">Alcance</span><span class="v">Fase 1 a fase 3</span></div>
+    <div><span class="k">Versión</span><span class="v">2</span></div>
+    <div><span class="k">Estado del fármaco</span><span class="v">En investigación</span></div>
+  </div>
+  <div class="estado">
+    <div class="t">Nota preliminar sobre el alcance de este documento</div>
+    <p>Este dossier recopila y referencia evidencia publicada. No es consejo médico, no contiene protocolos de dosificación, reconstitución ni administración, y no debe usarse como base para autoadministración. La retatrutida no está aprobada por ninguna agencia regulatoria del mundo y su venta para uso humano es ilegal en Estados Unidos, Australia, la Unión Europea y Chile. La sección 05 documenta por qué los datos de eficacia de las secciones 03 y 04 no son transferibles al producto que se comercializa fuera del circuito regulado.</p>
+  </div>
+</div>
+
+<div class="env">
+  <nav class="indice">
+    <div class="h">Índice</div>
+    <a href="#s01"><span>01</span><span>Nota metodológica</span></a>
+    <a href="#s02"><span>02</span><span>Perfil farmacológico</span></a>
+    <a href="#s03"><span>03</span><span>Evidencia de fase 2</span></a>
+    <a href="#s04"><span>04</span><span>Evidencia de fase 3</span></a>
+    <a href="#s05"><span>05</span><span>Casos clínicos publicados y señales</span></a>
+    <a href="#s06"><span>06</span><span>Seguridad del fármaco de ensayo</span></a>
+    <a href="#s07"><span>07</span><span>Comparación con terapias aprobadas</span></a>
+    <a href="#s08"><span>08</span><span>Estado regulatorio</span></a>
+    <a href="#s09"><span>09</span><span>Vacíos de evidencia</span></a>
+    <a href="#s10"><span>10</span><span>Síntesis</span></a>
+    <a href="#s11"><span>11</span><span>Bibliografía</span></a>
+  </nav>
+
+  <main>
+
+  <section id="s01">
+    <h2><span>01</span>Nota metodológica y clasificación de fuentes</h2>
+    <p>Cada bloque de datos de este documento lleva inmediatamente debajo una línea de fuente con la referencia numerada, el tipo de documento y el enlace verificable. La bibliografía de la sección 11 indica, para cada referencia, en qué apartados se la cita.</p>
+    <p>Las fuentes se clasifican en cuatro niveles. Esta distinción importa porque una porción sustancial de la información pública sobre retatrutida procede de comunicados corporativos o de sitios comerciales, no de literatura revisada por pares.</p>
+    <table class="t">
+      <thead><tr><th>Nivel</th><th>Tipo</th><th>Consideraciones</th></tr></thead>
+      <tbody>
+        <tr><td class="n">A</td><td class="n">Artículo revisado por pares</td><td class="g">Datos verificables con material suplementario, metodología y declaración de conflictos.</td></tr>
+        <tr><td class="n">B</td><td class="n">Comunicado del patrocinador o alerta sanitaria</td><td class="g">Datos primarios pero seleccionados por el emisor; los comunicados de Lilly no han pasado revisión por pares.</td></tr>
+        <tr><td class="n">C</td><td class="n">Prensa especializada o congreso</td><td class="g">Reporte secundario de datos presentados; útil para cifras aún no publicadas.</td></tr>
+        <tr><td class="n">D</td><td class="n">Fuente secundaria, agregadora o comercial</td><td class="g">Se usa solo cuando no existe fuente superior; se señala explícitamente en el texto.</td></tr>
+      </tbody>
+    </table>
+    <div class="bloque">
+      <div class="t2">Alcance de esta versión</div>
+      <p>Se han excluido deliberadamente los contenidos relativos a fiscalización, interceptación aduanera, litigios comerciales y oferta de vendedores no autorizados, así como los relatos individuales de pacientes recogidos por la prensa. Ninguno de esos elementos aporta evidencia clínica, analítica o farmacológica sobre el compuesto.</p>
+      <p>Se conservan, en cambio, el reporte de caso revisado por pares, las alertas emitidas por autoridades sanitarias y los datos analíticos de laboratorio, por ser las tres únicas categorías de evidencia publicada sobre el producto tal como circula fuera de los ensayos.</p>
+    </div>
+    <div class="aviso">
+      <div class="t2">Advertencia estructural sobre los datos de fase 3</div>
+      <p>A la fecha de corte, de los cinco ensayos de fase 3 positivos únicamente TRANSCEND-T2D-1 está publicado en una revista revisada por pares. TRIUMPH-1, -2, -3 y -4 existen como comunicados de prensa y presentaciones de congreso. Las cifras que se reportan aquí para esos cuatro ensayos son, por tanto, de nivel B o C, no de nivel A.</p>
+    </div>
+  </section>
+
+  <section id="s02">
+    <h2><span>02</span>Perfil farmacológico</h2>
+    <p>La retatrutida (código de desarrollo LY3437943) es un péptido sintético de 39 aminoácidos conjugado a un resto diácido graso, que actúa como agonista de tres receptores en una sola molécula: el del polipéptido insulinotrópico dependiente de glucosa (GIP), el del péptido similar al glucagón tipo 1 (GLP-1) y el del glucagón. Es el primer agonista triple en alcanzar desarrollo de fase 3.</p>
+    <h3>2.1 Potencia relativa y farmacocinética</h3>
+    <p>En estudios de cultivo celular, la retatrutida es menos potente que los ligandos endógenos en los receptores humanos de glucagón y GLP-1 (0,3 y 0,4 veces la actividad, respectivamente) y más potente en el receptor de GIP (por un factor de 8,9). Su farmacocinética es proporcional a la dosis, con una vida media de aproximadamente 6 días, lo que permite la administración subcutánea semanal.</p>
+    <div class="fuente">
+      <div class="l"><span class="niv a">A</span><span>Fuente [3] — Sanyal AJ, et al. <i>Triple hormone receptor agonist retatrutide for metabolic dysfunction-associated steatotic liver disease: a randomized phase 2a trial.</i> Nature Medicine, 2024. Sección introductoria.</span></div>
+      <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11271400/" target="_blank" rel="noopener">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11271400/</a>
+    </div>
+    <h3>2.2 Racional del componente glucagón</h3>
+    <p>La activación de GLP-1 enlentece el vaciamiento gástrico, suprime el apetito mediante señalización hipotalámica y potencia la secreción de insulina dependiente de glucosa. La activación de GIP amplifica la respuesta insulínica y puede influir en la distribución de grasa. El agonismo del receptor de glucagón incrementa la oxidación hepática de ácidos grasos y la termogénesis.</p>
+    <p>El glucagón es, simultáneamente, la principal promesa y la principal incógnita del diseño: aumenta el gasto energético y moviliza grasa hepática, pero también eleva la glucemia y la frecuencia cardíaca, efectos que deben quedar compensados por los otros dos brazos del agonismo. La preocupación teórica sobre pérdida de masa magra deriva de que la activación crónica del receptor de glucagón reduce los aminoácidos circulantes, lo que podría disminuir la síntesis proteica muscular.</p>
+    <div class="fuente">
+      <div class="l"><span class="niv a">A</span><span>Fuente [4] — <i>Effects of retatrutide on body composition in people with type 2 diabetes: a substudy of a phase 2 randomised trial.</i> Lancet Diabetes &amp; Endocrinology, 2025. PMID 40609566. Introducción.</span></div>
+      <div class="l"><span class="niv a">A</span><span>Fuente [24] — Katsi V, et al. <i>Retatrutide — A Game Changer in Obesity Pharmacotherapy.</i> Biomolecules. 2025;15(6):796.</span></div>
+    </div>
+    <h3>2.3 Amplitud del programa de desarrollo</h3>
+    <p>La retatrutida se evalúa en aproximadamente 19 ensayos clínicos distribuidos en tres familias de fase 3: TRIUMPH (obesidad y manejo de peso), TRANSCEND (diabetes tipo 2) y SYNERGY (MASLD/MASH). El programa inicial de fase 3, iniciado en 2023, ha reclutado más de 5.800 participantes en cuatro ensayos de registro globales. Las indicaciones bajo estudio incluyen obesidad y sobrepeso con al menos una comorbilidad relacionada, diabetes tipo 2, dolor por artrosis de rodilla, apnea obstructiva del sueño moderada a grave, dolor lumbar crónico, desenlaces cardiovasculares y renales, y enfermedad hepática esteatósica asociada a disfunción metabólica.</p>
+    <div class="fuente">
+      <div class="l"><span class="niv">B</span><span>Fuente [6] — Eli Lilly and Company. Comunicado, 23 de julio de 2026. Apartado «About retatrutide».</span></div>
+      <div class="l"><span class="niv">D</span><span>Fuente [35] — Retatrutide Knowledge Base. <i>Clinical Trials.</i> Recuento del programa completo.</span></div>
+    </div>
+  </section>
+
+  <section id="s03">
+    <h2><span>03</span>Evidencia de fase 2 — estudios revisados por pares</h2>
+    <p>Los cuatro estudios de esta sección son la única base de nivel A disponible para la molécula hasta la publicación de TRANSCEND-T2D-1 en junio de 2026. Todo el programa de fase 3 se construyó sobre ellos.</p>
+
+    <h3>3.1 Ensayo de fase 2 en obesidad — NEJM 2023</h3>
+    <p>Ensayo aleatorizado, doble ciego, controlado con placebo, en adultos con obesidad sin diabetes tipo 2. n = 338. Desenlace principal: cambio porcentual del peso corporal a las 48 semanas (media de mínimos cuadrados).</p>
+    <table class="t">
+      <thead><tr><th>Grupo de tratamiento</th><th>Cambio de peso a 48 semanas</th></tr></thead>
+      <tbody>
+        <tr><td class="n">Retatrutida 1 mg</td><td class="n">−8,7 %</td></tr>
+        <tr><td class="n">Retatrutida 4 mg (agrupado)</td><td class="n">−17,1 %</td></tr>
+        <tr><td class="n">Retatrutida 8 mg (agrupado)</td><td class="n">−22,8 %</td></tr>
+        <tr><td class="n">Retatrutida 12 mg</td><td class="n">−24,2 %</td></tr>
+        <tr><td class="n">Placebo</td><td class="n">−2,1 %</td></tr>
+      </tbody>
+    </table>
+    <p>El estudio reportó además mejoras en presión arterial, perfil lipídico y glucemia. Los eventos adversos más frecuentes fueron gastrointestinales y dependientes de la dosis. Este ensayo estableció la relación dosis-respuesta que definió las dosis de fase 3.</p>
+    <div class="fuente">
+      <div class="l"><span class="niv a">A</span><span>Fuente [1] — Jastreboff AM, Kaplan LM, Frías JP, et al. <i>Triple–Hormone-Receptor Agonist Retatrutide for Obesity — A Phase 2 Trial.</i> N Engl J Med. 2023;389(6):514–526. doi:10.1056/NEJMoa2301972</span></div>
+      <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2301972" target="_blank" rel="noopener">https://www.nejm.org/doi/full/10.1056/NEJMoa2301972</a>
+      <div class="l"><span class="niv">·</span><span>Cifras por dosis verificadas contra el registro secundario del artículo y contra la descripción del ensayo en [40] y [3], que citan −22,8 % y −24,2 % con 8 y 12 mg, y n = 338 con placebo −2,1 %.</span></div>
+    </div>
+
+    <h3>3.2 Ensayo de fase 2 en diabetes tipo 2 — Lancet 2023</h3>
+    <p>Ensayo aleatorizado, doble ciego, con control de placebo y control activo (dulaglutida 1,5 mg), realizado en Estados Unidos. A las 36 semanas se observó una reducción de HbA1c de hasta 2,2 puntos porcentuales y una reducción de peso de hasta 16,9 %.</p>
+    <div class="fuente">
+      <div class="l"><span class="niv a">A</span><span>Fuente [2] — Rosenstock J, Frías J, Jastreboff AM, et al. <i>Retatrutide, a GIP, GLP-1 and glucagon receptor agonist, for people with type 2 diabetes: a phase 2 trial conducted in the USA.</i> Lancet. 2023;402:529–544.</span></div>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/40609566/" target="_blank" rel="noopener">https://pubmed.ncbi.nlm.nih.gov/40609566/</a>
+    </div>
+
+    <h3>3.3 Subestudio de composición corporal por DXA — Lancet D&amp;E 2025</h3>
+    <p>Este es el estudio de referencia para la pregunta sobre pérdida de masa magra, y el más frecuentemente mal citado en la discusión pública.</p>
+    <h4>Diseño</h4>
+    <p>Subestudio del ensayo de fase 2 en diabetes tipo 2, realizado en 42 centros médicos de Estados Unidos. Participantes de 18 a 75 años, con HbA1c entre 7,0 % y 10,5 % e IMC entre 25 y 50 kg/m². Aleatorización a retatrutida 0,5 / 4 / 8 / 12 mg, dulaglutida 1,5 mg o placebo, semanalmente durante 36 semanas. Evaluación por absorciometría dual de rayos X (DXA) de masa grasa total, masa magra y grasa visceral androide.</p>
+    <div class="aviso">
+      <div class="t2">Población analizable — limitación central</div>
+      <p>189 participantes fueron inscritos al subestudio. De ellos, 155 tuvieron DXA basal y únicamente <b>103 completaron el tratamiento con DXA basal y a la semana 36</b>. Composición demográfica: 105 mujeres (56 %) y 84 hombres (44 %); 160 blancos (85 %), 24 negros (13 %), 5 asiáticos (3 %).</p>
+    </div>
+    <h4>Reducción porcentual de masa grasa total a 36 semanas</h4>
+    <table class="t">
+      <thead><tr><th>Grupo</th><th>Reducción de masa grasa (EE)</th><th>Diferencia LSM vs placebo</th><th>p</th></tr></thead>
+      <tbody>
+        <tr><td class="n">Retatrutida 0,5 mg</td><td class="n">4,9 % (1,4)</td><td class="n">−0,4 (IC 95 % −4,0 a 3,2)</td><td class="n">0,83</td></tr>
+        <tr><td class="n">Retatrutida 4 mg (agrupado)</td><td class="n">15,2 % (3,2)</td><td class="n">−10,7 (IC 95 % −17,2 a −4,2)</td><td class="n">0,0013</td></tr>
+        <tr><td class="n">Retatrutida 8 mg (agrupado)</td><td class="n">26,1 % (2,5)</td><td class="n">−21,6</td><td class="n">&lt;0,0001</td></tr>
+        <tr><td class="n">Retatrutida 12 mg</td><td class="n">23,2 % (3,0)</td><td class="n">−18,7</td><td class="n">&lt;0,0001</td></tr>
+        <tr><td class="n">Dulaglutida 1,5 mg</td><td class="n">2,6 % (1,6)</td><td class="n">—</td><td class="n">—</td></tr>
+        <tr><td class="n">Placebo</td><td class="n">4,5 % (1,2)</td><td class="n">—</td><td class="n">—</td></tr>
+      </tbody>
+    </table>
+    <h4>Interpretación de los autores</h4>
+    <p>La proporción de pérdida de masa magra respecto a la pérdida de peso total fue similar a la de otros tratamientos de obesidad. El índice de pérdida grasa —razón entre masa grasa perdida y masa corporal total perdida— fue consistente con la mayoría de los demás tratamientos de reducción de peso.</p>
+    <div class="bloque">
+      <div class="t2">Lectura correcta</div>
+      <p>La hipótesis del «glucagón protector de músculo» no quedó demostrada en humanos. Lo demostrado es que la proporción no empeora pese a que la pérdida total de peso es mayor. En modelos preclínicos sí se observó mayor reducción de masa grasa que magra, y en modelos animales presentados en la ADA 2026 la retatrutida superó a tirzepatida y a CagriSema en preservación de masa magra — pero eso es preclínico y no se ha replicado en humanos.</p>
+    </div>
+    <h4>Conflictos de interés declarados</h4>
+    <p>El estudio fue financiado por Eli Lilly and Company. Siete de los autores firmantes (iniciales TC, QW, NCS, AH, ZM, CK, CH) son empleados y accionistas de Eli Lilly and Company.</p>
+    <div class="fuente">
+      <div class="l"><span class="niv a">A</span><span>Fuente [4] — Lancet Diabetes &amp; Endocrinology. 2025. PMID 40609566. doi:10.1016/S2213-8587(25)00092-0</span></div>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/40609566/" target="_blank" rel="noopener">https://pubmed.ncbi.nlm.nih.gov/40609566/</a>
+      <div class="l"><span class="niv">C</span><span>Fuente [36] — MDNewsline. <i>Retatrutide Reduces Fat Mass Without Excess Lean Loss.</i> 17 jul 2025. Detalle de diseño (42 centros, criterios de inclusión) y valores LSM.</span></div>
+      <div class="l"><span class="niv">C</span><span>Fuente [23] — Pharmacy Times. <i>ADA 2026: Obesity Pharmacotherapy and the Future of Weight Management.</i> Datos preclínicos comparativos.</span></div>
+    </div>
+
+    <h3>3.4 Subestudio de esteatosis hepática (MASLD) — Nature Medicine 2024</h3>
+    <p>Subestudio preespecificado del ensayo de fase 2 en obesidad, aleatorizado, doble ciego y controlado con placebo. n = 98 participantes con enfermedad hepática esteatósica asociada a disfunción metabólica y al menos 10 % de grasa hepática. Asignación a 48 semanas de retatrutida subcutánea semanal (1, 4, 8 o 12 mg) o placebo. Desenlace principal: cambio relativo medio de grasa hepática a las 24 semanas, medido por MRI-PDFF.</p>
+    <table class="t">
+      <thead><tr><th>Grupo</th><th>Cambio relativo de grasa hepática (24 sem)</th><th>Grasa hepática normal (&lt;5 %)</th></tr></thead>
+      <tbody>
+        <tr><td class="n">Retatrutida 1 mg</td><td class="n">−42,9 %</td><td class="n">27 %</td></tr>
+        <tr><td class="n">Retatrutida 4 mg</td><td class="n">−57,0 %</td><td class="n">52 %</td></tr>
+        <tr><td class="n">Retatrutida 8 mg</td><td class="n">−81,4 %</td><td class="n">79 %</td></tr>
+        <tr><td class="n">Retatrutida 12 mg</td><td class="n">−82,4 %</td><td class="n">86 %</td></tr>
+        <tr><td class="n">Placebo</td><td class="n">+0,3 %</td><td class="n">0 %</td></tr>
+      </tbody>
+    </table>
+    <p class="cod" style="margin-top:12px">Todas las comparaciones con placebo: p &lt; 0,001.</p>
+    <div class="negativo">
+      <div class="t2">Hallazgo de seguridad hepática — determinante para la sección 05</div>
+      <p>Los eventos adversos más frecuentes en el subestudio fueron gastrointestinales, transitorios y de intensidad leve a moderada, con mayor frecuencia en los grupos de 8 y 12 mg. Dos participantes tratados con retatrutida (2,5 %) presentaron un total de tres eventos adversos graves.</p>
+      <p><b>No se detectaron señales de hepatotoxicidad</b> ni en la población total del ensayo de obesidad (n = 336) ni en el subgrupo con MASLD (n = 98) hasta la semana 48, evaluado mediante gráficos eDISH (<i>evaluation of Drug-Induced Serious Hepatotoxicity</i>), que aplican la ley de Hy —elevación simultánea de aminotransferasas &gt;3× el límite superior normal y de bilirrubina total &gt;2× LSN— y el corolario de Temple. Los aumentos de β-hidroxibutirato no se asociaron a cetoacidosis en ningún individuo.</p>
+      <p>Este dato es el eje del documento: la molécula fabricada bajo control farmacéutico y administrada en condiciones de ensayo no mostró toxicidad hepática. <b>Los casos de fallo hepático agudo descritos en la sección 5.2 corresponden a productos distintos.</b></p>
+    </div>
+    <div class="fuente">
+      <div class="l"><span class="niv a">A</span><span>Fuente [3] — Sanyal AJ, et al. Nature Medicine. 2024.</span></div>
+      <a href="https://www.nature.com/articles/s41591-024-03018-2" target="_blank" rel="noopener">https://www.nature.com/articles/s41591-024-03018-2</a>
+      <div class="l"><span class="niv">C</span><span>Fuente [37] — ADA Meeting News. Declaraciones del Dr. Sanyal sobre normalización de grasa hepática y ausencia de señal hepatotóxica a 48 semanas.</span></div>
+    </div>
+  </section>
+
+  <section id="s04">
+    <h2><span>04</span>Evidencia de fase 3 — programas TRIUMPH y TRANSCEND</h2>
+    <p>Cinco ensayos de fase 3 han reportado resultados positivos entre diciembre de 2025 y julio de 2026. Solo uno está publicado en revista revisada por pares.</p>
+
+    <h3>4.1 TRIUMPH-4 — obesidad con artrosis de rodilla</h3>
+    <p>Primer resultado positivo de fase 3 del programa, diciembre de 2025. 445 adultos con obesidad o sobrepeso y dolor por artrosis de rodilla, seguidos 68 semanas. Pérdida de peso de 28,7 % con la dosis de 12 mg. Reducción del dolor artrósico de hasta 75,8 %. Reducción de colesterol LDL de aproximadamente 20 % y reversión de prediabetes a normoglucemia en un 72 % de la subpoblación afectada. Un 58,6 % de los participantes alcanzó al menos 25 % de pérdida de peso.</p>
+    <p>Este ensayo identificó por primera vez la señal de disestesia, que no había sido prominente en los datos de fase 2: 20,9 % con 12 mg, 8,8 % con 9 mg y 0,7 % con placebo. Tasas de discontinuación: 18,2 % con 12 mg y 12,2 % con 9 mg.</p>
+    <div class="fuente">
+      <div class="l"><span class="niv">B</span><span>Fuente [7] — Eli Lilly and Company. Comunicado, 11 de diciembre de 2025.</span></div>
+      <div class="l"><span class="niv">C</span><span>Fuente [38] — PharmExec. <i>Lilly's Retatrutide Displays Positive Topline Results in Successful Phase III Trial.</i></span></div>
+      <div class="l"><span class="niv">D</span><span>Fuente [20] — Lola Health. 25 abr 2026. Incidencia de disestesia por dosis en TRIUMPH-4 (n = 445).</span></div>
+      <div class="l"><span class="niv">·</span><span>Nota de nivel: las cifras de dolor artrósico (−75,8 %), LDL y reversión de prediabetes proceden de fuentes secundarias [38] y [48]; no han sido verificadas contra publicación revisada por pares.</span></div>
+    </div>
+
+    <h3>4.2 TRANSCEND-T2D-1 — diabetes tipo 2 (NCT06354660)</h3>
+    <p><b>Único ensayo de fase 3 publicado en revista revisada por pares.</b> Publicado en The Lancet el 6 de junio de 2026, simultáneamente con su presentación en las 86.ª Sesiones Científicas de la Asociación Americana de Diabetes en Nueva Orleans.</p>
+    <h4>Diseño</h4>
+    <p>Estudio de fase 3, aleatorizado, multicéntrico y doble ciego, en adultos con diabetes tipo 2 de inicio reciente (duración media de la enfermedad 2,5 años) y control glucémico inadecuado solo con dieta y ejercicio. HbA1c basal entre 7,0 % y 9,5 %; IMC de al menos 23 kg/m². Aleatorización 1:1:1:1 a retatrutida 4, 9 o 12 mg semanales o placebo durante 40 semanas. Estado del registro: completado.</p>
+    <h4>Resultados publicados</h4>
+    <ul>
+      <li>Reducción de HbA1c de hasta 1,94 puntos porcentuales desde una basal de 7,9 %, frente a 0,8 puntos con placebo (desenlace principal, superioridad alcanzada).</li>
+      <li>Reducción de peso de hasta 15,3 %, frente a 2,6 % con placebo.</li>
+      <li>Aproximadamente el 90 % de los participantes alcanzó HbA1c &lt;7 %.</li>
+      <li>Mejoras adicionales en presión arterial sistólica y perfil lipídico.</li>
+    </ul>
+    <div class="aviso">
+      <div class="t2">Discrepancia numérica que conviene registrar</div>
+      <p>El comunicado de marzo de 2026 citó reducciones de HbA1c de 1,7 / 2,0 / 1,9 % y pérdida de peso de hasta 16,8 %. La publicación de Lancet reporta hasta 1,94 puntos y 15,3 %. La diferencia corresponde a estimandos distintos: el de eficacia (efecto si todos hubieran permanecido en tratamiento) frente al de régimen de tratamiento (efecto medio incluyendo discontinuaciones). También existe discrepancia en el tamaño muestral reportado: algunas fuentes indican n = 537 y otras n = 778, según se cuente la población del ensayo principal o la del análisis presentado. Para uso académico debe consultarse la publicación original.</p>
+    </div>
+    <div class="fuente">
+      <div class="l"><span class="niv">B</span><span>Fuente [22] — ClinicalTrials.gov. NCT06354660. Patrocinador: Eli Lilly and Company. Id. secundario J1I-MC-GZBY.</span></div>
+      <a href="https://clinicaltrials.gov/study/NCT06354660" target="_blank" rel="noopener">https://clinicaltrials.gov/study/NCT06354660</a>
+      <div class="l"><span class="niv">C</span><span>Fuente [18] — EASD e-Learning. <i>ADA Scientific Sessions 2026 Wrap Up.</i> 16 jun 2026. Simposio presidido por el Prof. Naveed Sattar.</span></div>
+      <div class="l"><span class="niv">C</span><span>Fuente [17] — Managed Healthcare Executive. ADA 2026. Criterios de inclusión y esquema de aleatorización.</span></div>
+      <div class="l"><span class="niv">C</span><span>Fuente [39] — Pharmacy Times. Cifras del comunicado de marzo de 2026.</span></div>
+    </div>
+
+    <h3>4.3 TRIUMPH-1 — ensayo pivotal en obesidad (NCT05929066)</h3>
+    <p>Ensayo maestro de fase 3, 80 semanas, aleatorizado, doble ciego y controlado con placebo, con dos ensayos <i>basket</i> anidados para apnea obstructiva del sueño moderada a grave y para dolor por artrosis de rodilla. Presentado por la Dra. Ania M. Jastreboff (Yale School of Medicine) el 6 de junio de 2026 en la ADA.</p>
+    <h4>Población y diseño</h4>
+    <p>2.339 participantes aleatorizados 1:1:1:1 a retatrutida 4, 9, 12 mg o placebo. Criterios: adultos con obesidad o sobrepeso y al menos una comorbilidad relacionada con el peso, definida como IMC ≥30 kg/m² o ≥27 kg/m² con hipertensión, dislipidemia, apnea obstructiva del sueño o enfermedad cardiovascular. Sin diabetes. Escalado gradual desde 2 mg semanales, con incrementos cada cuatro semanas hasta la dosis objetivo. Peso basal medio 112,7 kg, IMC 40,0 kg/m². Desenlace principal: cambio porcentual del peso a la semana 80.</p>
+    <table class="t">
+      <thead><tr><th>Desenlace a 80 semanas</th><th>4 mg</th><th>9 mg</th><th>12 mg</th><th>Placebo</th></tr></thead>
+      <tbody>
+        <tr><td class="g">Cambio de peso — estimando de eficacia</td><td class="n">−19,0 %</td><td class="n">−25,9 %</td><td class="n">−28,3 %</td><td class="n">−2,2 %</td></tr>
+        <tr><td class="g">Equivalente en kg</td><td class="n">−21,4 kg</td><td class="n">−29,2 kg</td><td class="n">−31,9 kg</td><td class="n">−2,5 kg</td></tr>
+        <tr><td class="g">Cambio de peso — estimando de régimen</td><td class="n">−17,6 %</td><td class="n">−23,7 %</td><td class="n">−25,0 %</td><td class="n">−3,9 %</td></tr>
+        <tr><td class="g">Cambio de circunferencia de cintura</td><td class="n">−16,3 cm</td><td class="n">−21,8 cm</td><td class="n">−24,1 cm</td><td class="n">−3,6 cm</td></tr>
+        <tr><td class="g">Pérdida ≥25 %</td><td class="n">27,8 %</td><td class="n">52,9 %</td><td class="n">62,5 %</td><td class="n">2,2 %</td></tr>
+        <tr><td class="g">Pérdida ≥30 %</td><td class="n">15,3 %</td><td class="n">37,9 %</td><td class="n">45,3 %</td><td class="n">0,5 %</td></tr>
+        <tr><td class="g">Pérdida ≥35 %</td><td class="n">5,9 %</td><td class="n">20,8 %</td><td class="n">27,2 %</td><td class="n">0,3 %</td></tr>
+      </tbody>
+    </table>
+    <p class="cod" style="margin-top:12px">Cintura basal media 118,3 cm. La reducción porcentual de peso con 4 mg fue desenlace secundario clave, no primario.</p>
+    <h4>Extensión preespecificada a 104 semanas</h4>
+    <p>Enroló a los primeros 532 participantes que completaron la semana 80 sin discontinuación ni reducción permanente de dosis, con IMC ≥35 al inicio y &gt;22 en la semana 80. Recibieron 24 semanas adicionales con escalado ciego a dosis máxima tolerada (9 o 12 mg). Peso basal medio de este subgrupo: 121,7 kg, IMC 42,8.</p>
+    <table class="t">
+      <thead><tr><th>Grupo (a dosis máxima tolerada)</th><th>Peso a 104 sem — eficacia</th><th>Estimando de régimen</th></tr></thead>
+      <tbody>
+        <tr><td class="n">Retatrutida 4 mg → DMT</td><td class="n">−27,9 % (−33,2 kg)</td><td class="n">−25,7 %</td></tr>
+        <tr><td class="n">Retatrutida 9 mg → DMT</td><td class="n">−29,5 % (−36,6 kg)</td><td class="n">−28,7 %</td></tr>
+        <tr><td class="n">Retatrutida 12 mg → DMT</td><td class="n">−30,3 % (−38,5 kg)</td><td class="n">−29,9 %</td></tr>
+        <tr><td class="n">Placebo → retatrutida DMT</td><td class="n">−19,2 % (−22,6 kg)</td><td class="n">−18,9 %</td></tr>
+      </tbody>
+    </table>
+    <div class="aviso">
+      <div class="t2">Sesgo de selección en la extensión</div>
+      <p>La extensión enroló únicamente a participantes que habían completado 80 semanas sin discontinuar y tolerando su dosis asignada. La cifra de −30,3 % a dos años describe, por construcción, a una población de respondedores tolerantes, no a la cohorte original. No es comparable con el −28,3 % del análisis principal.</p>
+    </div>
+    <h4>Reclasificación de IMC</h4>
+    <p>El 65,3 % de los participantes con 12 mg alcanzó un IMC inferior a 30 a la semana 80, incluido el 37,5 % de quienes partieron con obesidad clase 3 (IMC ≥40). Aproximadamente un tercio alcanzó un IMC de 25 o menor.</p>
+    <div class="aviso">
+      <div class="t2">Advertencia estadística declarada por el propio patrocinador</div>
+      <p>La proporción de participantes que alcanzó IMC &lt;30 fue un análisis preespecificado no controlado por multiplicidad; el mismo desenlace en participantes con IMC basal ≥40 fue evaluado post hoc. Estos dos números, los más citados en prensa general, son los de menor solidez estadística del ensayo.</p>
+    </div>
+    <h4>Ensayos basket anidados</h4>
+    <p>Reducción del 73,1 % en el dolor de rodilla medido por índice WOMAC y reducción del 60,6 % en el índice de apnea-hipopnea.</p>
+    <div class="fuente">
+      <div class="l"><span class="niv">B</span><span>Fuente [5] — Eli Lilly and Company. Comunicado, 21 de mayo de 2026. Tablas completas de desenlaces, diseño de escalado, definición de ambos estimandos y notas al pie sobre multiplicidad.</span></div>
+      <a href="https://investor.lilly.com/news-releases/news-release-details/lillys-triple-agonist-retatrutide-delivered-powerful-weight-loss" target="_blank" rel="noopener">investor.lilly.com — comunicado del 21 de mayo de 2026</a>
+      <div class="l"><span class="niv">C</span><span>Fuente [19] — Pharmaceutical Technology. 18 jun 2026. Estructura de ensayo maestro con dos basket.</span></div>
+      <div class="l"><span class="niv">C</span><span>Fuente [17] — Managed Healthcare Executive. Cifras de los basket: WOMAC −73,1 % y AHI −60,6 %.</span></div>
+      <div class="l"><span class="niv">C</span><span>Fuente [31] — Clinical Trials Arena. 8 jun 2026. Proporción que alcanzó IMC ≤25.</span></div>
+    </div>
+
+    <h3>4.4 TRIUMPH-2 — obesidad o sobrepeso con diabetes tipo 2 (NCT05929079)</h3>
+    <p>Fase 3, 80 semanas, aleatorizado, doble ciego, controlado con placebo, bajo diseño basket. 1.152 participantes aleatorizados 1:1:1:1. Mismo esquema de escalado que TRIUMPH-1. Incluyó un período de seguimiento post-tratamiento de cuatro semanas. Peso basal medio 106,4 kg, IMC 38,2 kg/m², HbA1c basal 7,7 %.</p>
+    <table class="t">
+      <thead><tr><th>Desenlace a 80 semanas</th><th>4 mg</th><th>9 mg</th><th>12 mg</th><th>Placebo</th></tr></thead>
+      <tbody>
+        <tr><td class="g">Cambio porcentual de peso</td><td class="n">−12,7 %</td><td class="n">−19,1 %</td><td class="n">−20,8 %</td><td class="n">−4,0 %</td></tr>
+        <tr><td class="g">Equivalente en kg</td><td class="n">−13,5 kg</td><td class="n">−20,6 kg</td><td class="n">−22,5 kg</td><td class="n">−4,2 kg</td></tr>
+        <tr><td class="g">Cambio de HbA1c (desde 7,7 %)</td><td class="n">−1,4 %</td><td class="n">−1,6 %</td><td class="n">−1,5 %</td><td class="n">−0,2 %</td></tr>
+      </tbody>
+    </table>
+    <div class="bloque">
+      <div class="t2">Dos lecturas críticas</div>
+      <p>Primero, la población con diabetes tipo 2 perdió sustancialmente menos peso que la población general de obesidad (−20,8 % frente a −28,3 % con 12 mg). Es el comportamiento esperado en toda la clase incretínica y la razón por la que ambos ensayos se reportan por separado.</p>
+      <p>Segundo, una anomalía sin explicación en el comunicado: el brazo de 9 mg discontinuó más que el de 12 mg (11,6 % frente a 7,7 %), lo cual rompe el patrón dosis-respuesta esperable. El comunicado del patrocinador no ofrece hipótesis al respecto.</p>
+    </div>
+
+    <h3>4.5 TRIUMPH-3 — obesidad severa con enfermedad cardiovascular (NCT05882045)</h3>
+    <p>Fase 3, 80 semanas, aleatorizado, doble ciego, controlado con placebo, en participantes con obesidad severa (clase 2 o 3, IMC ≥35 kg/m²) y enfermedad cardiovascular establecida, con o sin diabetes tipo 2. 1.949 participantes aleatorizados en proporción 1:1:2 para 9 mg, 12 mg y placebo. Peso basal medio 111,4 kg, IMC 40,4 kg/m². Es la población de mayor riesgo estudiada hasta ahora.</p>
+    <table class="t">
+      <thead><tr><th>Desenlace a 80 semanas</th><th>9 mg</th><th>12 mg</th><th>Placebo</th></tr></thead>
+      <tbody>
+        <tr><td class="g">Cambio porcentual de peso</td><td class="n">−21,6 %</td><td class="n">−22,6 %</td><td class="n">−3,2 %</td></tr>
+        <tr><td class="g">Equivalente en kg</td><td class="n">−23,9 kg</td><td class="n">−25,3 kg</td><td class="n">−3,5 kg</td></tr>
+      </tbody>
+    </table>
+    <h4>Desenlaces cardiovasculares</h4>
+    <p>Los eventos cardiovasculares mayores ocurrieron con menos frecuencia de lo previsto en ambos brazos, lo que reduce sustancialmente la potencia estadística del análisis.</p>
+    <table class="t">
+      <thead><tr><th>Análisis</th><th>Eventos retatrutida (9+12 mg)</th><th>Eventos placebo</th><th>HR in-study (preespecificado)</th><th>HR on-treatment</th></tr></thead>
+      <tbody>
+        <tr><td class="g">MACE-5 — muerte por cualquier causa, infarto, ACV, evento de insuficiencia cardíaca o revascularización coronaria</td><td class="n">44</td><td class="n">52</td><td class="n">0,82 (IC 95 % 0,55–1,22)</td><td class="n">0,73 (IC 95 % 0,47–1,12)</td></tr>
+        <tr><td class="g">MACE-3 — muerte cardiovascular, infarto o ACV</td><td class="n">27</td><td class="n">23</td><td class="n">1,12 (IC 95 % 0,64–1,96)</td><td class="n">0,92 (IC 95 % 0,51–1,65)</td></tr>
+      </tbody>
+    </table>
+    <div class="negativo">
+      <div class="t2">Lectura correcta de estas cifras</div>
+      <p><b>No hay demostración de beneficio cardiovascular.</b> El punto estimado de MACE-3 (HR 1,12) apunta numéricamente en dirección desfavorable, aunque el intervalo de confianza cruza ampliamente el 1 y el resultado no es concluyente en ninguna dirección. El análisis on-treatment, que excluye eventos ocurridos más de 35 días después de discontinuar, no fue preespecificado y por tanto es exploratorio, no confirmatorio.</p>
+      <p>Contexto comparativo: semaglutida y dulaglutida sí han demostrado reducción de eventos cardiovasculares en ensayos dedicados de desenlaces, y tirzepatida ha demostrado seguridad cardiovascular. Si el agonismo añadido del receptor de glucagón se traduce o no en beneficio cardiovascular sigue siendo una pregunta abierta y crítica. El ensayo dedicado de desenlaces cardiovasculares y renales, con aproximadamente 10.000 pacientes, permanece en curso.</p>
+    </div>
+    <h4>Factores de riesgo cardiometabólico a 80 semanas — dosis de 12 mg</h4>
+    <table class="t">
+      <tbody>
+        <tr><td class="g">Triglicéridos</td><td class="n">−37,0 %</td></tr>
+        <tr><td class="g">Proteína C reactiva ultrasensible (hsCRP)</td><td class="n">−51,2 %</td></tr>
+        <tr><td class="g">Colesterol no-HDL</td><td class="n">−16,5 %</td></tr>
+        <tr><td class="g">Presión arterial sistólica</td><td class="n">−9,3 mmHg</td></tr>
+        <tr><td class="g">Circunferencia de cintura</td><td class="n">−19,0 cm</td></tr>
+      </tbody>
+    </table>
+    <div class="fuente">
+      <div class="l"><span class="niv">B</span><span>Fuente [6] — Eli Lilly and Company. Comunicado, 23 de julio de 2026. Tablas completas de TRIUMPH-2 y TRIUMPH-3, identificadores NCT, cocientes de riesgo de MACE con sus intervalos de confianza y nota metodológica sobre el análisis on-treatment no preespecificado.</span></div>
+      <a href="https://investor.lilly.com/news-releases/news-release-details/lillys-triple-agonist-retatrutide-successful-two-additional" target="_blank" rel="noopener">investor.lilly.com — comunicado del 23 de julio de 2026</a>
+      <div class="l"><span class="niv">C</span><span>Fuente [29] — Pharmacy Times. Ausencia de datos de desenlaces cardiovasculares como limitación regulatoria.</span></div>
+    </div>
+  </section>
+
+  <section id="s05">
+    <h2><span>05</span>Casos clínicos reales y señales de seguridad documentadas</h2>
+    <p>Esta sección recoge los casos individuales publicados y los conglomerados de eventos adversos notificados por autoridades sanitarias. La evidencia se separa nítidamente en dos categorías que no deben confundirse: eventos ocurridos con producto de ensayo clínico (sección 06) y eventos ocurridos con producto adquirido fuera del circuito regulado (esta sección).</p>
+
+    <h3>5.1 Caso publicado: diarrea intratable inducida por retatrutida</h3>
+    <p class="cod">Komolafe O. Retatrutide-Induced Intractable Diarrhea. Annals of Internal Medicine: Clinical Cases. 2026;5:e251218. En línea el 7 de abril de 2026. doi:10.7326/aimcc.2025.1218</p>
+    <h4>Presentación</h4>
+    <p>Varón de 32 años que se autoinyectó retatrutida obtenida en línea de un vendedor directo al consumidor. El propósito declarado de la compra era la pérdida de peso. Los síntomas aparecieron tras iniciar la administración y mejoraron tras suspenderla.</p>
+    <h4>Hallazgos clínicos documentados</h4>
+    <ul>
+      <li>Diarrea intratable que motivó hospitalización.</li>
+      <li>Acidosis metabólica sin brecha aniónica, atribuida a la diarrea.</li>
+      <li>Excreción fraccional de sodio inferior al 1 %, consistente con una causa prerrenal de la lesión renal.</li>
+      <li>Colonoscopia con biopsia para descartar etiologías alternativas.</li>
+      <li>Impresión clínica de diarrea intratable inducida por retatrutida, de mecanismo presumiblemente secretor, si bien no se midió la brecha osmótica fecal.</li>
+      <li>Manejo con terapia dirigida a síntomas, continuada y optimizada.</li>
+    </ul>
+    <h4>Intercambio editorial posterior</h4>
+    <p>Un lector, el Dr. Opeyemi Komolafe (MUSC Florence Medical Centre), publicó un comentario el 10 de julio de 2026 solicitando aclaración sobre si el paciente había usado retatrutida compuesta. Su argumento: de ser así, no es posible verificar qué medicamento tomó realmente el paciente ni si existían aditivos que contribuyeran a la diarrea. Añadió que la retatrutida nunca ha sido estudiada a dosis tan altas como 20 mg, lo que cuestiona la relevancia clínica del caso como efecto atribuible al fármaco.</p>
+    <p>La respuesta de los autores confirmó que el individuo obtuvo la retatrutida de una fuente en línea, que se trata de un agente en investigación, y que las preguntas sobre pureza y composición de tales péptidos y sus excipientes son válidas. Señalaron que uno de los objetivos centrales del reporte era precisamente destacar el peligro inherente del uso de agentes farmacoterapéuticos sin licencia. Existe además una corrección publicada al artículo.</p>
+    <div class="negativo">
+      <div class="t2">Lección metodológica que atraviesa toda esta sección</div>
+      <p>En el mercado gris no es posible establecer causalidad farmacológica, porque el fármaco no constituye una variable conocida. El caso no demuestra que la retatrutida cause diarrea intratable; demuestra que <b>un producto rotulado como retatrutida, de origen no verificado y a una dosis nunca estudiada, produjo un cuadro grave.</b></p>
+    </div>
+    <div class="fuente">
+      <div class="l"><span class="niv a">A</span><span>Fuente [8] — Komolafe O. AIM Clinical Cases. 2026;5:e251218. doi:10.7326/aimcc.2025.1218</span></div>
+      <a href="https://www.acpjournals.org/doi/10.7326/aimcc.2025.1218" target="_blank" rel="noopener">https://www.acpjournals.org/doi/10.7326/aimcc.2025.1218</a>
+      <div class="l"><span class="niv">·</span><span>El intercambio de comentarios y la respuesta de los autores están alojados en la misma página del artículo. Registro de difusión: Altmetric ID 194805694.</span></div>
+    </div>
+
+    <h3>5.2 Conglomerado australiano de fallo hepático agudo</h3>
+    <h4>Alerta sanitaria oficial — Estado de Victoria, 19 de junio de 2026</h4>
+    <p>El Departamento de Salud de Victoria emitió una alerta titulada «Toxicity linked to unapproved peptide product labelled Retatrutide». Contenido verificable de la alerta:</p>
+    <ul>
+      <li>Seis casos de toxicidad hepática aguda notificados desde enero de 2026 en Victoria, en personas que usaron un producto peptídico no aprobado rotulado como retatrutida.</li>
+      <li>Los efectos tóxicos se consideran posiblemente asociados a un contaminante presente en los productos, y la alerta declara explícitamente que todos los productos así etiquetados están en riesgo.</li>
+      <li>Los productos fueron adquiridos en línea, a través de conocidos y mediante cuentas de redes sociales.</li>
+      <li>Los productos peptídicos no aprobados, particularmente los inyectables, conllevan riesgos significativos de contaminación, infección o daño tisular local.</li>
+      <li>Signos de alarma indicados para consulta médica pronta: fatiga, dolor abdominal, prurito, orina oscura, ictericia de piel u ojos y facilidad para el hematoma.</li>
+      <li>Se cree que casos similares han sido reportados en otras jurisdicciones australianas; las investigaciones continúan.</li>
+    </ul>
+    <h4>Actualización del recuento — 24 de agosto de 2026</h4>
+    <p>Un séptimo caso de toxicidad hepática aguda fue notificado en la misma jurisdicción. Dos elementos técnicos de esa actualización son relevantes para la caracterización del cuadro: la latencia entre el inicio del producto y la aparición de la lesión hepática se sitúa en el orden de pocas semanas, y la concentración geográfica de los casos en un solo estado es consistente con un problema de lote más que con un efecto sistemático de la molécula. Esta segunda observación corresponde a la asesoría médica de la Therapeutic Goods Administration.</p>
+    <p class="cod" style="margin-top:14px">Se omiten en esta versión los relatos individuales de pacientes recogidos por la prensa. No añaden información clínica sobre la que la alerta oficial no informe, y su valor como evidencia es anecdótico.</p>
+    <div class="fuente">
+      <div class="l"><span class="niv">B</span><span>Fuente [9] — Department of Health, State Government of Victoria (Australia). Alerta sanitaria, 19 de junio de 2026.</span></div>
+      <a href="https://www.health.vic.gov.au/health-alerts/toxicity-linked-to-unapproved-peptide-retatrutide" target="_blank" rel="noopener">https://www.health.vic.gov.au/health-alerts/toxicity-linked-to-unapproved-peptide-retatrutide</a>
+      <div class="l"><span class="niv">C</span><span>Fuente [11] — ABC News (Australia). 24 ago 2026. Recuento actualizado a siete casos; latencia de pocas semanas; valoración de la TGA sobre concentración geográfica compatible con problema de lote.</span></div>
+    </div>
+
+    <h3>5.3 Alerta de la Therapeutic Goods Administration — abril de 2026</h3>
+    <p>La TGA australiana emitió en abril de 2026 una alerta de seguridad por el aumento de la importación y el suministro de péptidos no aprobados, calificados como riesgo de seguridad, señalando que estos productos no han sido evaluados en cuanto a seguridad, calidad ni eficacia por la agencia. Eventos adversos notificados a la TGA en relación con retatrutida no aprobada:</p>
+    <ul>
+      <li>Reacciones alérgicas graves que condujeron a hospitalización.</li>
+      <li>Inflamación severa.</li>
+      <li>Prurito intenso de cuerpo entero.</li>
+      <li>Palpitaciones, dolor, insomnio y visión borrosa.</li>
+      <li>Lesiones musculoesqueléticas.</li>
+    </ul>
+    <div class="fuente">
+      <div class="l"><span class="niv">C</span><span>Fuente [16] — Healthy Male (Australia). 1 jul 2026. Recopila el contenido de la alerta de la TGA de abril de 2026.</span></div>
+    </div>
+
+    <h3>5.4 Análisis analítico de viales reales — el dato decisivo</h3>
+    <p>Leeder Analytical (Melbourne) analizó tres viales de retatrutida falsificada obtenidos de usuarios del mercado negro, a petición de la ABC y la Universidad de Queensland. Uno contenía menos retatrutida falsificada de lo indicado en la etiqueta; los otros dos tenían concentraciones mucho más altas. El laboratorio proporcionó además el desglose completo de sus resultados de análisis de péptidos del mercado negro correspondientes a 2026: la solicitud más frecuente fue el ensayo de pureza de productos no aprobados rotulados como retatrutida.</p>
+    <table class="t">
+      <thead><tr><th>Resultado sobre 18 muestras analizadas en 2026</th><th>Proporción</th></tr></thead>
+      <tbody>
+        <tr><td class="g">Coincidencia con lo declarado en la etiqueta</td><td class="n">1 de 18</td></tr>
+        <tr><td class="g">Concentración superior a la etiqueta</td><td class="n">aprox. 30 %</td></tr>
+        <tr><td class="g">Concentración inferior a la etiqueta</td><td class="n">aprox. 30 %</td></tr>
+        <tr><td class="g">Vial que no contenía nada del péptido</td><td class="n">1 vial</td></tr>
+      </tbody>
+    </table>
+    <h4>Por qué el análisis de pureza no resuelve el problema</h4>
+    <p>El ensayo de pureza tiene un alcance analítico limitado: informa que existe cierta cantidad de retatrutida en el vial, pero no detecta contaminantes ni otras sustancias mezcladas. Un resultado de pureza favorable no es, por tanto, un certificado de inocuidad.</p>
+    <p>La demostración empírica de ese límite procede del propio conglomerado hepático: se sometieron a análisis viales procedentes de pacientes que sufrieron fallo hepático severo, y dos laboratorios independientes realizaron un análisis extensivo de componentes sin llegar a caracterizar completamente el contenido. Es decir, incluso con recursos analíticos superiores a los que dispone cualquier comprador, el agente causal no pudo aislarse.</p>
+    <div class="negativo">
+      <div class="t2">Implicación aritmética directa</div>
+      <p>Según estos datos, un vial rotulado con una cantidad determinada tiene aproximadamente <b>una probabilidad de 1 entre 18</b> de contener esa cantidad. Cualquier cálculo de reconstitución o de volumen a extraer es una operación exacta sobre un numerador desconocido: el resultado puede ser una fracción de la dosis pretendida, un múltiplo de ella, o cero. El riesgo no reside en la aritmética, sino en que el insumo no es verificable.</p>
+    </div>
+    <div class="fuente">
+      <div class="l"><span class="niv">C</span><span>Fuente [12] — ABC News (Australia). <i>We tested counterfeit peptides off the black market. Here are the results.</i> 28 ago 2026. Resultados de Leeder Analytical; desglose de las 18 muestras; alcance limitado del ensayo de pureza; análisis multilaboratorio de viales procedentes de pacientes con fallo hepático.</span></div>
+      <a href="https://www.abc.net.au/news/2026-08-28/black-market-peptides-dangerous-doses/107059092" target="_blank" rel="noopener">https://www.abc.net.au/news/2026-08-28/black-market-peptides-dangerous-doses/107059092</a>
+    </div>
+
+    <h3>5.5 Evidencia analítica convergente en otros péptidos del mercado gris</h3>
+    <p>La retatrutida es el único de su clase sin versión aprobada, lo que la hace estructuralmente imposible de verificar por comparación. Para dimensionar el problema sirve la evidencia analítica sobre péptidos que sí tienen versión aprobada de referencia:</p>
+    <ul>
+      <li>Semaglutida de vendedores del mercado gris: pureza medida entre 7,7 % y 14,37 % frente a un 99 % declarado en etiqueta. Todas las muestras del estudio dieron positivo a endotoxinas, subproductos bacterianos que al inyectarse pueden causar fiebre, hipotensión y reacciones inmunitarias graves.</li>
+      <li>Análisis forense belga de péptidos falsificados incautados: pureza entre 5 % y 75 % para péptidos con cisteína, con múltiples muestras excediendo los límites internacionales de toxicidad para fármacos inyectables. El 26 % contenía arsénico o plomo por encima de los umbrales farmacéuticos de seguridad, y el 100 % contenía tetrahidrofurano residual, un solvente industrial del proceso de síntesis.</li>
+    </ul>
+    <p>A esto se suma el problema de verificación documental: los certificados de análisis que ofrecen los vendedores son imágenes escaneadas o PDF generados por el supuesto laboratorio, y como documentos son trivialmente falsificables. Para un operador que mueve cientos de viales al mes, destinar varios miles de dólares mensuales a verificación independiente eliminaría el margen, por lo que la mayoría de vendedores pequeños no analiza lotes completos.</p>
+    <div class="fuente">
+      <div class="l"><span class="niv">D</span><span>Fuente [28] — GLP Winner. 9 may 2026. Recopila el estudio JMIR sobre semaglutida del mercado gris y el análisis forense belga.</span></div>
+      <div class="l"><span class="niv">D</span><span>Fuente [47] — KRECE. 6 may 2026. Falsificabilidad de los certificados de análisis y economía del testeo de lotes.</span></div>
+      <div class="l"><span class="niv">·</span><span>Advertencia de nivel: los estudios subyacentes (JMIR y el análisis belga) son de nivel A, pero se citan aquí a través de una fuente secundaria comercial. Para uso académico deben localizarse las publicaciones originales.</span></div>
+    </div>
+  </section>
+
+  <section id="s06">
+    <h2><span>06</span>Perfil de seguridad del fármaco de ensayo</h2>
+    <p>Los datos de esta sección corresponden exclusivamente a la molécula fabricada bajo control farmacéutico y administrada en ensayos monitorizados. No son extrapolables a los productos descritos en la sección 05.</p>
+
+    <h3>6.1 Eventos adversos en TRIUMPH-1</h3>
+    <table class="t">
+      <thead><tr><th>Evento adverso</th><th>4 mg</th><th>9 mg</th><th>12 mg</th><th>Placebo</th></tr></thead>
+      <tbody>
+        <tr><td class="g">Náuseas</td><td class="n">28,6 %</td><td class="n">38,4 %</td><td class="n">42,4 %</td><td class="n">14,8 %</td></tr>
+        <tr><td class="g">Diarrea</td><td class="n">25,2 %</td><td class="n">34,1 %</td><td class="n">32,0 %</td><td class="n">13,5 %</td></tr>
+        <tr><td class="g">Estreñimiento</td><td class="n">23,8 %</td><td class="n">25,9 %</td><td class="n">26,1 %</td><td class="n">10,9 %</td></tr>
+        <tr><td class="g">Vómitos</td><td class="n">10,6 %</td><td class="n">22,8 %</td><td class="n">25,3 %</td><td class="n">4,8 %</td></tr>
+        <tr><td class="g">Infección respiratoria alta</td><td class="n">14,2 %</td><td class="n">12,2 %</td><td class="n">13,1 %</td><td class="n">11,6 %</td></tr>
+        <tr><td class="g">Disestesia</td><td class="n">5,1 %</td><td class="n">12,3 %</td><td class="n">12,5 %</td><td class="n">0,9 %</td></tr>
+        <tr><td class="g">Infección del tracto urinario</td><td class="n">7,5 %</td><td class="n">8,8 %</td><td class="n">8,4 %</td><td class="n">5,3 %</td></tr>
+        <tr><td class="g">Discontinuación por evento adverso</td><td class="n">4,1 %</td><td class="n">6,9 %</td><td class="n">11,3 %</td><td class="n">4,9 %</td></tr>
+      </tbody>
+    </table>
+
+    <h3>6.2 Eventos adversos en TRIUMPH-2 y TRIUMPH-3</h3>
+    <table class="t">
+      <thead>
+        <tr><th>Evento</th><th colspan="4">TRIUMPH-2 · obesidad + DT2</th><th colspan="3">TRIUMPH-3 · obesidad severa + ECV</th></tr>
+        <tr><th></th><th>4 mg</th><th>9 mg</th><th>12 mg</th><th>Placebo</th><th>9 mg</th><th>12 mg</th><th>Placebo</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="g">Diarrea</td><td class="n">27,4 %</td><td class="n">33,5 %</td><td class="n">33,6 %</td><td class="n">13,2 %</td><td class="n">30,1 %</td><td class="n">24,4 %</td><td class="n">8,7 %</td></tr>
+        <tr><td class="g">Náuseas</td><td class="n">13,7 %</td><td class="n">20,8 %</td><td class="n">28,0 %</td><td class="n">8,0 %</td><td class="n">21,7 %</td><td class="n">22,4 %</td><td class="n">5,8 %</td></tr>
+        <tr><td class="g">Estreñimiento</td><td class="n">14,0 %</td><td class="n">16,2 %</td><td class="n">16,8 %</td><td class="n">9,4 %</td><td class="n">18,0 %</td><td class="n">15,7 %</td><td class="n">7,1 %</td></tr>
+        <tr><td class="g">Apetito disminuido</td><td class="n">5,8 %</td><td class="n">12,3 %</td><td class="n">17,1 %</td><td class="n">4,5 %</td><td class="n">13,5 %</td><td class="n">14,5 %</td><td class="n">3,0 %</td></tr>
+        <tr><td class="g">Vómitos</td><td class="n">5,5 %</td><td class="n">10,2 %</td><td class="n">15,7 %</td><td class="n">4,2 %</td><td class="n">—</td><td class="n">—</td><td class="n">—</td></tr>
+        <tr><td class="g">Hiperglucemia</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">—</td><td class="n">3,9 %</td><td class="n">3,1 %</td><td class="n">13,4 %</td></tr>
+        <tr><td class="g">Disestesia</td><td class="n">4,5 %</td><td class="n">5,6 %</td><td class="n">7,3 %</td><td class="n">0,7 %</td><td class="n">6,4 %</td><td class="n">6,4 %</td><td class="n">1,3 %</td></tr>
+        <tr><td class="g">Infección urinaria</td><td class="n">3,8 %</td><td class="n">6,3 %</td><td class="n">8,0 %</td><td class="n">6,6 %</td><td class="n">6,1 %</td><td class="n">7,0 %</td><td class="n">5,3 %</td></tr>
+        <tr><td class="g">Discontinuación por EA</td><td class="n">3,8 %</td><td class="n">11,6 %</td><td class="n">7,7 %</td><td class="n">4,9 %</td><td class="n">9,8 %</td><td class="n">13,5 %</td><td class="n">4,8 %</td></tr>
+      </tbody>
+    </table>
+    <p class="cod" style="margin-top:12px">Los eventos de disestesia e infección urinaria fueron generalmente de leves a moderados, la mayoría se resolvieron durante el tratamiento y la mayor parte de los participantes continuó con el tratamiento.</p>
+
+    <h3>6.3 Disestesia — análisis de la señal nueva</h3>
+    <p>La disestesia se define como una sensación de quemazón, hormigueo o sensibilidad cutánea alterada. Es la señal de seguridad que distingue a la retatrutida del resto de la clase, y merece tratamiento específico por cuatro razones.</p>
+    <h4>Primera: no apareció en fase 2</h4>
+    <p>Es un hallazgo nuevo que emergió en fase 3 y que investigadores y analistas están monitorizando de cerca.</p>
+    <h4>Segunda: es claramente dosis-dependiente</h4>
+    <p>En TRIUMPH-4 alcanzó el 20,9 % con 12 mg frente al 8,8 % con 9 mg y el 0,7 % con placebo. En TRIUMPH-1, con la misma dosis máxima, la incidencia fue de 12,5 %. La diferencia entre ambos ensayos no está explicada en los comunicados.</p>
+    <h4>Tercera: el mecanismo es desconocido</h4>
+    <p>Se han propuesto dos hipótesis principales. La primera apunta a la actividad del receptor de GLP-1 sobre nervios periféricos, que podría alterar la señalización nerviosa y producir percepciones sensoriales anómalas. La segunda apunta a efectos sobre los pequeños vasos sanguíneos que irrigan los nervios sensitivos. El agonismo adicional del receptor de glucagón —que ni semaglutida ni tirzepatida poseen— podría ser un factor contribuyente, ya que hay receptores de glucagón expresados en tejido del sistema nervioso, tanto central como periférico. Una hipótesis alternativa apunta a desplazamientos transitorios de vitaminas del grupo B y electrolitos, esenciales para la salud nerviosa, causados por la pérdida rápida de peso y la reducción de la ingesta.</p>
+    <h4>Cuarta: puede no ser específica de la retatrutida</h4>
+    <p>La nueva dosis de 7,2 mg de semaglutida ha señalado sensaciones cutáneas similares, lo que sugiere que podría tratarse en parte de un efecto más amplio de la clase GLP-1 a dosis altas. Hasta que se confirme la causa subyacente, predecir quién la desarrollará es difícil.</p>
+    <div class="fuente">
+      <div class="l"><span class="niv">B</span><span>Fuentes [5] y [6] — Comunicados de Eli Lilly de 21 mayo y 23 julio de 2026. Incidencias por dosis en TRIUMPH-1, -2 y -3.</span></div>
+      <div class="l"><span class="niv">C</span><span>Fuente [34] — Drug Discovery Trends. 28 may 2026. Hipótesis de desplazamientos de vitaminas B y electrolitos.</span></div>
+      <div class="l"><span class="niv">D</span><span>Fuentes [20] y [27] — Lola Health y Second Nature. Hipótesis de nervios periféricos y microvasos; señal comparable con semaglutida 7,2 mg.</span></div>
+    </div>
+
+    <h3>6.4 Frecuencia cardíaca y masa magra</h3>
+    <p><b>Frecuencia cardíaca.</b> Se ha reportado un aumento de aproximadamente 6,7 latidos por minuto con la dosis de 12 mg. El agonismo del receptor de glucagón es el candidato mecanístico, dado que existen receptores de glucagón en el nódulo sinoauricular.</p>
+    <p><b>Masa magra.</b> Toda pérdida de peso —farmacológica, quirúrgica o dietética— involucra algún grado de pérdida de tejido magro. En el subestudio DXA de fase 2, la masa magra representó aproximadamente el 25–30 % de la pérdida total de peso, en línea con el resto de la clase. Para dimensionar: en los ensayos de orforglipron un promedio del 26,9 % de la pérdida total correspondió a masa magra, y con CagriSema se observó una reducción del 14,4 % de masa blanda magra. No se han publicado datos directos de composición corporal de fase 3 para retatrutida. Las estimaciones que circulan (14 a 24,6 libras de masa muscular para una pérdida de 70,3 libras) son extrapolaciones, no mediciones.</p>
+
+    <h3>6.5 Riesgos de clase y monitorización</h3>
+    <p>Los riesgos considerados de clase para agonistas incretínicos, aplicables por analogía y bajo vigilancia en el programa de retatrutida, incluyen pancreatitis, enfermedad de la vesícula biliar, elevación de la frecuencia cardíaca y el riesgo teórico de tumores de células C tiroideas. En fase 2, los análisis rutinarios no mostraron hepatotoxicidad ni deterioro renal consistentes y dependientes de la dosis. Los participantes de los ensayos fueron monitorizados durante el escalado con enzimas hepáticas (ALT, AST), pruebas de función renal, marcadores cardiovasculares (presión arterial, frecuencia cardíaca, lípidos) y glucemia con HbA1c.</p>
+    <p>No existe un estudio farmacocinético dedicado en insuficiencia hepática, por lo que no hay recomendaciones formales de ajuste de dosis en enfermedad hepática. Separar un efecto hepatotóxico directo de los cambios metabólicos esperables durante una pérdida de peso significativa es difícil sin estudios controlados de seguridad hepática.</p>
+    <div class="fuente">
+      <div class="l"><span class="niv">D</span><span>Fuente [40] — HealthRX. 26 may 2026. Ausencia de estudio farmacocinético dedicado en insuficiencia hepática.</span></div>
+      <div class="l"><span class="niv">D</span><span>Fuente [41] — Swolverine. Parámetros de monitorización usados en los ensayos.</span></div>
+    </div>
+  </section>
+
+  <section id="s07">
+    <h2><span>07</span>Comparación con terapias aprobadas</h2>
+    <table class="t">
+      <thead><tr><th>Fármaco</th><th>Mecanismo</th><th>Pérdida de peso</th><th>Ensayo de referencia</th></tr></thead>
+      <tbody>
+        <tr><td class="n">Semaglutida 2,4 mg</td><td class="n">GLP-1</td><td class="n">−14,9 % / 68 sem</td><td class="n">STEP 1</td></tr>
+        <tr><td class="n">Semaglutida (dosis alta)</td><td class="n">GLP-1</td><td class="n">≈ −20 % / 72 sem</td><td class="n">STEP UP</td></tr>
+        <tr><td class="n">Tirzepatida 15 mg</td><td class="n">GIP / GLP-1</td><td class="n">−22,5 % / 72 sem</td><td class="n">SURMOUNT-1</td></tr>
+        <tr><td class="n">Retatrutida 4 mg</td><td class="n">GIP / GLP-1 / glucagón</td><td class="n">−19,0 % / 80 sem</td><td class="n">TRIUMPH-1</td></tr>
+        <tr><td class="n">Retatrutida 12 mg</td><td class="n">GIP / GLP-1 / glucagón</td><td class="n">−28,3 % / 80 sem</td><td class="n">TRIUMPH-1</td></tr>
+      </tbody>
+    </table>
+    <div class="aviso">
+      <div class="t2">Son comparaciones entre ensayos, no comparaciones directas</div>
+      <p>Las poblaciones, duraciones, criterios de inclusión y estimandos difieren entre programas. El único estudio cabeza a cabeza real es NCT06662383, que compara retatrutida con tirzepatida en adultos con obesidad, con fecha estimada de finalización en diciembre de 2026. Hasta que ese ensayo lea, la superioridad de la retatrutida es plausible pero no está probada.</p>
+    </div>
+    <p>En control glucémico la relación se invierte parcialmente: la tirzepatida ha producido reducciones de HbA1c algo mayores en comparaciones cruzadas (hasta 2,4 puntos en el programa SURPASS), mientras la retatrutida produce mayor pérdida de peso. Ambos fármacos son de Eli Lilly. El ensayo TRANSCEND-T2D-2, que compara retatrutida con semaglutida, aportará la primera comparación directa frente a un agonista GLP-1; no hay actualmente ningún cabeza a cabeza planificado frente a tirzepatida en diabetes.</p>
+    <p>La retatrutida ha catalizado además el desarrollo de otros multiagonistas: survodutide (Boehringer Ingelheim, dual GLP-1/glucagón, con datos de SYNCHRONIZE-1 presentados en la ADA 2026), CagriSema (cagrilintida + semaglutida, programa REIMAGINE), y agonistas triples orales en fase preclínica como ASC37 de Ascletis Pharma. También se presentaron formulaciones depot diseñadas para administración mensual de tirzepatida y retatrutida.</p>
+    <div class="fuente">
+      <div class="l"><span class="niv">B</span><span>Fuente [21] — ClinicalTrials.gov. NCT06662383. Finalización estimada: diciembre de 2026.</span></div>
+      <a href="https://clinicaltrials.gov/study/NCT06662383" target="_blank" rel="noopener">https://clinicaltrials.gov/study/NCT06662383</a>
+      <div class="l"><span class="niv">C</span><span>Fuente [26] — The Pharmaceutical Journal. 22 may 2026. Comparación con SURMOUNT-1 y STEP UP.</span></div>
+      <div class="l"><span class="niv">C</span><span>Fuentes [23] y [43] — Pharmacy Times y HCPLive. Panorama de multiagonistas, formulaciones depot y contexto de SYNCHRONIZE-1, REIMAGINE y VESPER.</span></div>
+      <div class="l"><span class="niv">D</span><span>Fuente [42] — Retatrutide Knowledge Base. Comparación cruzada con SURPASS y estado de TRANSCEND-T2D-2.</span></div>
+    </div>
+  </section>
+
+  <section id="s08">
+    <h2><span>08</span>Estado regulatorio</h2>
+    <div class="negativo">
+      <div class="t2">Estado a 31 de agosto de 2026</div>
+      <p><b>Ninguna agencia regulatoria del mundo ha aprobado la retatrutida.</b> Es una molécula en investigación que no puede ser vendida ni comercializada legalmente para uso humano, y que está legalmente disponible únicamente para participantes de los ensayos clínicos de Eli Lilly. En Chile no existe registro sanitario ante el ISP ni vía de acceso legal fuera de ensayos clínicos.</p>
+    </div>
+    <h3>8.1 Situación regulatoria</h3>
+    <p>Eli Lilly declaró tras los resultados de TRIUMPH-2 y TRIUMPH-3 que dispone del paquete de datos clínicos necesario para presentaciones regulatorias globales en tres indicaciones: obesidad, dolor por artrosis de rodilla y apnea obstructiva del sueño. La compañía está completando el paquete integral de datos de Química, Fabricación y Controles (CMC) requerido para una Solicitud de Licencia Biológica (BLA), que planea presentar ante la FDA en el primer trimestre de 2027.</p>
+    <p>Esta fecha representa un retraso respecto de la guía previa, que apuntaba a una presentación antes del cierre de 2026. La compañía atribuyó el aplazamiento al tiempo adicional necesario para ensamblar los datos de fabricación y control de calidad. Una aprobación, de producirse, se estima posible más adelante en 2027.</p>
+    <div class="fuente">
+      <div class="l"><span class="niv">B</span><span>Fuente [6] — Eli Lilly, comunicado del 23 de julio de 2026. Paquete CMC y plan de presentación de BLA en Q1 2027.</span></div>
+      <div class="l"><span class="niv">B</span><span>Fuente [30] — Eli Lilly. <i>What to know about retatrutide.</i> 23 jul 2026. Declaración de que nadie debería tomar nada que diga ser retatrutida fuera de un ensayo patrocinado por Lilly.</span></div>
+      <div class="l"><span class="niv">C</span><span>Fuente [25] — Quartz. 12 ago 2026. Confirmación del retraso desde fines de 2026 hasta Q1 2027 y su motivo.</span></div>
+    </div>
+
+    <h3>8.2 Posición de la FDA</h3>
+    <ul>
+      <li>Las ventas de retatrutida no aprobada a consumidores son ilegales.</li>
+      <li>La retatrutida no puede ser compuesta legalmente; tampoco puede repackagearse ni venderse su principio activo a farmacias de compuestos.</li>
+      <li>Los productos denominados «research use only» son de calidad desconocida y pueden ser dañinos para la salud de los consumidores.</li>
+      <li>Los fármacos no aprobados vendidos para uso humano pueden suponer riesgos significativos.</li>
+    </ul>
+    <p>La agencia ya advertía a los profesionales sanitarios sobre la ilegalidad de las versiones compuestas de retatrutida y sus riesgos desde marzo de 2025.</p>
+    <div class="fuente">
+      <div class="l"><span class="niv">B</span><span>Fuente [13] — Eli Lilly and Company. Comunicado, 12 de agosto de 2026. Posición de la FDA sobre ilegalidad de la venta y prohibición del compounding.</span></div>
+      <div class="l"><span class="niv">C</span><span>Fuente [15] — FiercePharma. Advertencia de la FDA a profesionales sanitarios de marzo de 2025.</span></div>
+      <div class="l"><span class="niv">C</span><span>Fuente [32] — NPR. 13 ago 2026. Ilegalidad del compounding, del repackaging y de la venta del principio activo.</span></div>
+    </div>
+
+    <h3>8.3 Marco de aplicación</h3>
+    <p>Eli Lilly ha emprendido acciones legales contra vendedores de versiones no autorizadas y ha referido entidades a autoridades sanitarias y judiciales. El detalle de esas acciones, así como las cifras de interceptación en frontera y de retirada de anuncios en plataformas digitales, corresponde al ámbito de la fiscalización y no a la evaluación de la evidencia clínica o farmacológica del compuesto. Se omite en esta versión del dossier por quedar fuera de su alcance.</p>
+    <p>Lo único con implicación directa para la interpretación de la evidencia es un punto de contexto regulatorio: en julio de 2026, un panel asesor de la FDA respaldó un uso más amplio de seis péptidos para diversas dolencias sin evidencia sustancial de su seguridad y eficacia, lo que ilustra la tensión entre la demanda de acceso y los estándares probatorios en esta categoría de productos.</p>
+    <div class="fuente">
+      <div class="l"><span class="niv">C</span><span>Fuente [44] — BioPharma Dive. Agosto de 2026. Contexto del panel asesor de la FDA de julio de 2026 sobre péptidos.</span></div>
+      <a href="https://www.biopharmadive.com/news/lilly-lawsuit-retatrutide-black-market-obesity-drug/827659/" target="_blank" rel="noopener">biopharmadive.com</a>
+    </div>
+  </section>
+
+  <section id="s09">
+    <h2><span>09</span>Vacíos de evidencia</h2>
+    <table class="t">
+      <thead><tr><th>Vacío</th><th>Estado y por qué importa</th></tr></thead>
+      <tbody>
+        <tr><td class="n">Beneficio cardiovascular duro</td><td class="g">No demostrado. TRIUMPH-3 tuvo menos eventos de lo previsto y ambos cocientes de riesgo cruzan el 1. Pendiente el ensayo dedicado de desenlaces cardiovasculares y renales con aproximadamente 10.000 pacientes.</td></tr>
+        <tr><td class="n">Composición corporal en fase 3</td><td class="g">Los únicos datos DXA proceden del subestudio de fase 2, con n analizable de 103 participantes. Datos adicionales estaban previstos para más adelante en 2026.</td></tr>
+        <tr><td class="n">Publicación revisada por pares</td><td class="g">Solo TRANSCEND-T2D-1 está publicado (The Lancet, 6 jun 2026). TRIUMPH-1, -2, -3 y -4 existen como comunicados y presentaciones. Falta acceso a material suplementario, análisis de subgrupos y descripción completa de eventos adversos graves.</td></tr>
+        <tr><td class="n">Mecanismo de la disestesia</td><td class="g">Desconocido. No se observó en fase 2. Imposible predecir quién la desarrollará hasta que se confirme la causa subyacente.</td></tr>
+        <tr><td class="n">Exposición multianual</td><td class="g">El resultado más largo cubre 104 semanas en un subgrupo seleccionado por tolerancia. Los patrones de efectos adversos con uso de varios años no están establecidos.</td></tr>
+        <tr><td class="n">Reganancia tras suspensión</td><td class="g">Sin datos publicados. TRIUMPH-2 incluyó apenas cuatro semanas de seguimiento post-tratamiento.</td></tr>
+        <tr><td class="n">Poblaciones poco estudiadas</td><td class="g">Embarazo, insuficiencia renal o hepática severa, adultos mayores de 75 años y personas con múltiples condiciones simultáneas están típicamente subrepresentados en los ensayos. No existe estudio farmacocinético dedicado en insuficiencia hepática.</td></tr>
+        <tr><td class="n">Datos del mundo real</td><td class="g">Las tasas de discontinuación de fase 3 son útiles, pero los datos reales suelen mostrar patrones distintos una vez que un fármaco se prescribe ampliamente. No existirán datos post-aprobación hasta que haya aprobación.</td></tr>
+        <tr><td class="n">Precio y acceso</td><td class="g">Sin definir. Estimaciones de analistas sitúan el posicionamiento entre un 20 % y un 30 % por encima de la tirzepatida, pero son proyecciones, no política de precios anunciada.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="s10">
+    <h2><span>10</span>Síntesis</h2>
+    <p>Con la evidencia disponible al 31 de agosto de 2026, la retatrutida es el agente farmacológico más eficaz jamás reportado para reducción de peso, con un expediente de cinco ensayos de fase 3 positivos y una señal de eficacia que se aproxima al territorio de la cirugía bariátrica. Es también un fármaco cuyo perfil de seguridad contiene una señal nueva sin explicación mecanística, cuyo beneficio cardiovascular no está demostrado, cuya publicación revisada por pares está en su mayor parte pendiente, y cuyo expediente regulatorio todavía no ha sido presentado ante ninguna agencia.</p>
+    <div class="negativo">
+      <div class="t2">La distinción central de este dossier</div>
+      <p>La molécula estudiada en ensayos <b>no mostró señales de hepatotoxicidad a 48 semanas</b> bajo evaluación eDISH formal, con criterios de ley de Hy aplicados tanto a la población total de obesidad como al subgrupo con enfermedad hepática esteatósica.</p>
+      <p>Los productos adquiridos fuera del circuito regulado acumulan <b>siete casos documentados de fallo hepático agudo</b> en una sola jurisdicción australiana en el transcurso de ocho meses, más un reporte de caso publicado de diarrea intratable con acidosis metabólica y lesión renal prerrenal.</p>
+      <p><b>No son el mismo compuesto.</b> Los datos de eficacia de las secciones 03 y 04 no son transferibles a lo que se comercializa en internet, porque en 17 de 18 viales analizados por un laboratorio independiente el contenido no coincidió con la etiqueta, y porque el análisis de pureza no detecta contaminantes ni sustancias añadidas.</p>
+    </div>
+    <p>Para quien busque acceso, las dos rutas con evidencia detrás son la participación en un ensayo clínico patrocinado por Eli Lilly o la espera hasta la aprobación regulatoria, prevista como pronto para 2027. Para quien busque reducción de peso en el presente, la tirzepatida está aprobada, disponible en Chile, cuenta con seguridad cardiovascular demostrada y alcanzó un 22,5 % de reducción de peso en SURMOUNT-1 —a tres puntos porcentuales y medio del resultado de la dosis de 4 mg de retatrutida— con un expediente regulatorio completo detrás. Cualquiera de estas decisiones corresponde tomarla con un endocrinólogo o médico tratante, no con un vendedor.</p>
+  </section>
+
+  <section id="s11">
+    <h2><span>11</span>Bibliografía con localización de citas</h2>
+    <p>Cada entrada indica el nivel de evidencia y las secciones exactas de este dossier en las que se la cita. Las referencias 1 a 4, 8 y 24 constituyen la base revisada por pares; el resto son comunicados oficiales, alertas de autoridades sanitarias, prensa especializada o fuentes secundarias, y están marcadas como tales.</p>
+
+    <div class="bib">
+      <div class="grupo">Nivel A — Literatura revisada por pares</div>
+      <div class="ref"><span class="num">[1]</span><div>
+        <div class="cita">Jastreboff AM, Kaplan LM, Frías JP, Wu Q, Du Y, Gurbuz S, Coskun T, Haupt A, Milicevic Z, Hartman ML, para los Retatrutide Phase 2 Obesity Trial Investigators.</div>
+        <div class="obra">Triple–Hormone-Receptor Agonist Retatrutide for Obesity — A Phase 2 Trial. New England Journal of Medicine. 2023;389(6):514–526. doi:10.1056/NEJMoa2301972</div>
+        <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2301972" target="_blank" rel="noopener">https://www.nejm.org/doi/full/10.1056/NEJMoa2301972</a>
+        <div class="en">Citada en: §3.1 (dosis-respuesta a 48 semanas), §3.3 (ensayo matriz del subestudio DXA), §3.4 (ensayo matriz del subestudio MASLD)</div>
+      </div></div>
+      <div class="ref"><span class="num">[2]</span><div>
+        <div class="cita">Rosenstock J, Frías J, Jastreboff AM, et al.</div>
+        <div class="obra">Retatrutide, a GIP, GLP-1 and glucagon receptor agonist, for people with type 2 diabetes: a randomised, double-blind, placebo and active-controlled, parallel-group, phase 2 trial conducted in the USA. Lancet. 2023;402:529–544.</div>
+        <div class="en">Citada en: §3.2 (HbA1c −2,2 % y peso −16,9 % a 36 semanas), §3.3 (ensayo matriz del subestudio de composición corporal)</div>
+      </div></div>
+      <div class="ref"><span class="num">[3]</span><div>
+        <div class="cita">Sanyal AJ, et al.</div>
+        <div class="obra">Triple hormone receptor agonist retatrutide for metabolic dysfunction-associated steatotic liver disease: a randomized phase 2a trial. Nature Medicine. 2024.</div>
+        <a href="https://www.nature.com/articles/s41591-024-03018-2" target="_blank" rel="noopener">https://www.nature.com/articles/s41591-024-03018-2</a>
+        <div class="en">Citada en: §2.1 (potencia relativa por receptor y vida media de 6 días), §3.1 (verificación cruzada), §3.4 (grasa hepática y ausencia de señal hepatotóxica por eDISH), §10</div>
+      </div></div>
+      <div class="ref"><span class="num">[4]</span><div>
+        <div class="cita">Autores del grupo de Eli Lilly and Company (iniciales declaradas TC, QW, NCS, AH, ZM, CK, CH).</div>
+        <div class="obra">Effects of retatrutide on body composition in people with type 2 diabetes: a substudy of a phase 2, double-blind, parallel-group, placebo-controlled, randomised trial. Lancet Diabetes &amp; Endocrinology. 2025. PMID 40609566. doi:10.1016/S2213-8587(25)00092-0</div>
+        <a href="https://pubmed.ncbi.nlm.nih.gov/40609566/" target="_blank" rel="noopener">https://pubmed.ncbi.nlm.nih.gov/40609566/</a>
+        <div class="en">Citada en: §2.2 (masa magra y glucagón), §3.2, §3.3 (datos DXA, n analizable y conflictos de interés), §6.4</div>
+      </div></div>
+      <div class="ref"><span class="num">[8]</span><div>
+        <div class="cita">Komolafe O.</div>
+        <div class="obra">Retatrutide-Induced Intractable Diarrhea. Annals of Internal Medicine: Clinical Cases. 2026;5:e251218. doi:10.7326/aimcc.2025.1218</div>
+        <a href="https://www.acpjournals.org/doi/10.7326/aimcc.2025.1218" target="_blank" rel="noopener">https://www.acpjournals.org/doi/10.7326/aimcc.2025.1218</a>
+        <div class="en">Citada en: §5.1 (caso completo, hallazgos de laboratorio, intercambio editorial), §10</div>
+      </div></div>
+      <div class="ref"><span class="num">[24]</span><div>
+        <div class="cita">Katsi V, Koutsopoulos G, Fragoulis C, Dimitriadis K, Tsioufis K.</div>
+        <div class="obra">Retatrutide — A Game Changer in Obesity Pharmacotherapy. Biomolecules. 2025;15(6):796. doi:10.3390/biom15060796. 1.ª Clínica de Cardiología, Universidad Nacional y Kapodistríaca de Atenas.</div>
+        <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12190491/" target="_blank" rel="noopener">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12190491/</a>
+        <div class="en">Citada en: §2.2 (mecanismo de los tres receptores y contexto de la clase incretínica)</div>
+      </div></div>
+
+      <div class="grupo">Nivel B — Comunicados del patrocinador, registros y alertas sanitarias</div>
+      <div class="ref"><span class="num">[5]</span><div>
+        <div class="cita">Eli Lilly and Company.</div>
+        <div class="obra">Lilly's triple agonist, retatrutide, delivered powerful weight loss in pivotal Phase 3 obesity trial. Comunicado, Indianápolis, 21 de mayo de 2026.</div>
+        <a href="https://investor.lilly.com/news-releases/news-release-details/lillys-triple-agonist-retatrutide-delivered-powerful-weight-loss" target="_blank" rel="noopener">investor.lilly.com</a>
+        <div class="en">Citada en: §4.3 (tablas completas de TRIUMPH-1, extensión a 104 semanas, estimandos, multiplicidad), §6.1, §6.3</div>
+      </div></div>
+      <div class="ref"><span class="num">[6]</span><div>
+        <div class="cita">Eli Lilly and Company.</div>
+        <div class="obra">Lilly's triple agonist, retatrutide, successful in two additional Phase 3 obesity trials, delivering significant improvements in weight and A1C. Comunicado, 23 de julio de 2026.</div>
+        <a href="https://investor.lilly.com/news-releases/news-release-details/lillys-triple-agonist-retatrutide-successful-two-additional" target="_blank" rel="noopener">investor.lilly.com</a>
+        <div class="en">Citada en: §4.4, §4.5 (TRIUMPH-3 completo, HR de MACE, factores cardiometabólicos), §6.2, §6.3, §8.1</div>
+      </div></div>
+      <div class="ref"><span class="num">[7]</span><div>
+        <div class="cita">Eli Lilly and Company.</div>
+        <div class="obra">Lilly's triple agonist, retatrutide, delivered weight loss of up to an average of 71.2 lbs along with substantial relief from osteoarthritis pain in first successful Phase 3 trial. Comunicado, 11 de diciembre de 2025.</div>
+        <div class="en">Citada en: §4.1 (TRIUMPH-4, resultado principal y dolor artrósico)</div>
+      </div></div>
+      <div class="ref"><span class="num">[9]</span><div>
+        <div class="cita">Department of Health, State Government of Victoria (Australia).</div>
+        <div class="obra">Toxicity linked to unapproved peptide product labelled Retatrutide. Alerta sanitaria oficial, 19 de junio de 2026.</div>
+        <a href="https://www.health.vic.gov.au/health-alerts/toxicity-linked-to-unapproved-peptide-retatrutide" target="_blank" rel="noopener">https://www.health.vic.gov.au/health-alerts/toxicity-linked-to-unapproved-peptide-retatrutide</a>
+        <div class="en">Citada en: §5.2 (seis casos de toxicidad hepática aguda, hipótesis de contaminante, signos de alarma), §10</div>
+      </div></div>
+      <div class="ref"><span class="num">[13]</span><div>
+        <div class="cita">Eli Lilly and Company.</div>
+        <div class="obra">Lilly calls on online platforms, payment companies and regulators to shut down the illegal retatrutide black market. Comunicado, 12 de agosto de 2026. Incluye declaración del Dr. David A. Hyman, director médico.</div>
+        <a href="https://investor.lilly.com/news-releases/news-release-details/lilly-calls-online-platforms-payment-companies-and-regulators" target="_blank" rel="noopener">investor.lilly.com</a>
+        <div class="en">Citada en: §8.2 (posición de la FDA sobre ilegalidad de la venta y prohibición del compounding)</div>
+      </div></div>
+      <div class="ref"><span class="num">[21]</span><div>
+        <div class="cita">ClinicalTrials.gov.</div>
+        <div class="obra">A Study of Retatrutide (LY3437943) Compared to Tirzepatide (LY3298176) in Adults Who Have Obesity. NCT06662383. Finalización estimada: diciembre de 2026.</div>
+        <a href="https://clinicaltrials.gov/study/NCT06662383" target="_blank" rel="noopener">https://clinicaltrials.gov/study/NCT06662383</a>
+        <div class="en">Citada en: §7 (único estudio cabeza a cabeza frente a tirzepatida)</div>
+      </div></div>
+      <div class="ref"><span class="num">[22]</span><div>
+        <div class="cita">ClinicalTrials.gov.</div>
+        <div class="obra">Effect of Retatrutide Compared With Placebo in Adult Participants With Type 2 Diabetes and Inadequate Glycemic Control With Diet and Exercise Alone (TRANSCEND-T2D-1). NCT06354660. Id. secundario J1I-MC-GZBY. Estado: completado (verificado 03/2026).</div>
+        <a href="https://clinicaltrials.gov/study/NCT06354660" target="_blank" rel="noopener">https://clinicaltrials.gov/study/NCT06354660</a>
+        <div class="en">Citada en: §4.2 (identificación y estado del ensayo)</div>
+      </div></div>
+      <div class="ref"><span class="num">[30]</span><div>
+        <div class="cita">Eli Lilly and Company.</div>
+        <div class="obra">What to know about retatrutide. Página informativa corporativa, 23 de julio de 2026.</div>
+        <a href="https://www.lilly.com/news/stories/what-to-know-about-retatrutide" target="_blank" rel="noopener">https://www.lilly.com/news/stories/what-to-know-about-retatrutide</a>
+        <div class="en">Citada en: §8.1 (advertencia sobre productos ilícitos, ingredientes desconocidos, contaminantes e impurezas; aclaración terminológica sobre «GLP-3»)</div>
+      </div></div>
+
+      <div class="grupo">Nivel C — Prensa especializada y cobertura de congresos</div>
+      <div class="ref"><span class="num">[11]</span><div>
+        <div class="cita">ABC News (Australia).</div>
+        <div class="obra">Doctors fear possible contaminated counterfeit peptide batch after seventh case of acute liver damage. 24 de agosto de 2026, act. 25 de agosto.</div>
+        <a href="https://www.abc.net.au/news/2026-08-24/contaminated-peptide-tests-liver-damage-hospitalisations/107070478" target="_blank" rel="noopener">abc.net.au</a>
+        <div class="en">Citada en: §5.2 (recuento actualizado a siete casos, latencia de pocas semanas, valoración sobre problema de lote), §10</div>
+      </div></div>
+      <div class="ref"><span class="num">[12]</span><div>
+        <div class="cita">ABC News (Australia).</div>
+        <div class="obra">We tested counterfeit peptides off the black market. Here are the results. 28 de agosto de 2026. Reporta datos analíticos primarios de Leeder Analytical (Melbourne) obtenidos a petición de ABC y la Universidad de Queensland.</div>
+        <a href="https://www.abc.net.au/news/2026-08-28/black-market-peptides-dangerous-doses/107059092" target="_blank" rel="noopener">abc.net.au</a>
+        <div class="en">Citada en: §5.4 (resultados completos de las 18 muestras, alcance limitado del ensayo de pureza, análisis multilaboratorio), §10</div>
+      </div></div>
+      <div class="ref"><span class="num">[15]</span><div>
+        <div class="cita">FiercePharma.</div>
+        <div class="obra">Lilly files lawsuits versus 6 sellers of retatrutide copycats. Agosto de 2026.</div>
+        <a href="https://www.fiercepharma.com/pharma/lilly-takes-6-companies-court-selling-retatrutide-knockoffs" target="_blank" rel="noopener">fiercepharma.com</a>
+        <div class="en">Citada en: §8.2 (advertencia de la FDA a profesionales sanitarios, marzo de 2025)</div>
+      </div></div>
+      <div class="ref"><span class="num">[16]</span><div>
+        <div class="cita">Healthy Male (Australia).</div>
+        <div class="obra">Retatrutide in Australia: What it is, how it works and the risks. 1 de julio de 2026.</div>
+        <a href="https://healthymale.org.au/health-article/retatrutide-or-reta-in-australia" target="_blank" rel="noopener">healthymale.org.au</a>
+        <div class="en">Citada en: §5.3 (alerta de la TGA de abril de 2026 y eventos adversos notificados)</div>
+      </div></div>
+      <div class="ref"><span class="num">[17]</span><div>
+        <div class="cita">Managed Healthcare Executive.</div>
+        <div class="obra">Retatrutide shows substantial weight loss, glycemic control in obesity and type 2 diabetes — ADA 2026. 7 de julio de 2026.</div>
+        <div class="en">Citada en: §4.2 (criterios de inclusión y diseño), §4.3 (basket: WOMAC −73,1 % y AHI −60,6 %)</div>
+      </div></div>
+      <div class="ref"><span class="num">[18]</span><div>
+        <div class="cita">EASD e-Learning.</div>
+        <div class="obra">ADA Scientific Sessions 2026 Wrap Up. 16 de junio de 2026. Simposio presidido por el Prof. Naveed Sattar.</div>
+        <a href="https://easd-elearning.eu/news/474/ADA-Scientific-Sessions-2026-Wrap-Up.html" target="_blank" rel="noopener">easd-elearning.eu</a>
+        <div class="en">Citada en: §4.2 (cifras publicadas y confirmación de publicación simultánea en The Lancet)</div>
+      </div></div>
+      <div class="ref"><span class="num">[19]</span><div>
+        <div class="cita">Pharmaceutical Technology.</div>
+        <div class="obra">ADA26: retatrutide delivers unprecedented weight loss in Phase III TRIUMPH-1. 18 de junio de 2026.</div>
+        <div class="en">Citada en: §4.3 (criterios de inclusión, estructura de ensayo maestro, fecha y lugar de presentación)</div>
+      </div></div>
+      <div class="ref"><span class="num">[23]</span><div>
+        <div class="cita">Pharmacy Times.</div>
+        <div class="obra">ADA 2026: Obesity Pharmacotherapy and the Future of Weight Management. 12 de julio de 2026.</div>
+        <div class="en">Citada en: §3.3 (datos preclínicos de preservación de masa magra), §7 (multiagonistas y formulaciones depot)</div>
+      </div></div>
+      <div class="ref"><span class="num">[25]</span><div>
+        <div class="cita">Quartz.</div>
+        <div class="obra">Eli Lilly sues 6 companies over illegal retatrutide sales. 12 de agosto de 2026.</div>
+        <div class="en">Citada en: §8.1 (retraso de la presentación de la BLA y su motivo)</div>
+      </div></div>
+      <div class="ref"><span class="num">[26]</span><div>
+        <div class="cita">The Pharmaceutical Journal (Royal College of Pharmacy).</div>
+        <div class="obra">Phase III retatrutide study demonstrates 30% weight loss. 22 de mayo de 2026.</div>
+        <div class="en">Citada en: §7 (comparación con SURMOUNT-1 y STEP UP)</div>
+      </div></div>
+      <div class="ref"><span class="num">[29]</span><div>
+        <div class="cita">Pharmacy Times.</div>
+        <div class="obra">What Pharmacists Need to Know About Retatrutide's TRIUMPH-1 Phase 3 Results. 2026.</div>
+        <div class="en">Citada en: §4.5 (ausencia de datos de desenlaces CV y comparación con semaglutida, dulaglutida y tirzepatida), §9</div>
+      </div></div>
+      <div class="ref"><span class="num">[31]</span><div>
+        <div class="cita">Clinical Trials Arena.</div>
+        <div class="obra">ADA26: key obesity readouts from the conference. 8 de junio de 2026.</div>
+        <div class="en">Citada en: §4.3 (proporción que alcanzó IMC ≤25)</div>
+      </div></div>
+      <div class="ref"><span class="num">[32]</span><div>
+        <div class="cita">NPR.</div>
+        <div class="obra">Eli Lilly files 6 lawsuits against businesses selling 'black market' obesity drug. 13 de agosto de 2026.</div>
+        <div class="en">Citada en: §8.2 (ilegalidad del compounding, del repackaging y de la venta del principio activo)</div>
+      </div></div>
+      <div class="ref"><span class="num">[34]</span><div>
+        <div class="cita">Drug Discovery Trends.</div>
+        <div class="obra">Lilly's retatrutide shows 28.3% weight loss, but increased side effects. 28 de mayo de 2026.</div>
+        <div class="en">Citada en: §6.3 (vitaminas B y electrolitos), §6.4 (comparativas con orforglipron y CagriSema), §9</div>
+      </div></div>
+      <div class="ref"><span class="num">[36]</span><div>
+        <div class="cita">MDNewsline.</div>
+        <div class="obra">Retatrutide Reduces Fat Mass Without Excess Lean Loss. Revisión médica de la Dra. Shani Saks, 17 de julio de 2025.</div>
+        <div class="en">Citada en: §3.3 (diseño del subestudio DXA: 42 centros, criterios de inclusión, valores LSM)</div>
+      </div></div>
+      <div class="ref"><span class="num">[37]</span><div>
+        <div class="cita">ADA Meeting News.</div>
+        <div class="obra">Phase 2 trial results demonstrate benefits of retatrutide in obesity, type 2 diabetes, NASH. 11 de abril de 2024.</div>
+        <div class="en">Citada en: §3.4 (declaraciones del Dr. Sanyal sobre normalización de grasa hepática)</div>
+      </div></div>
+      <div class="ref"><span class="num">[38]</span><div>
+        <div class="cita">PharmExec (Pharmaceutical Executive).</div>
+        <div class="obra">Lilly's Retatrutide Displays Positive Topline Results in Successful Phase III Trial. 2026.</div>
+        <div class="en">Citada en: §4.1 (TRIUMPH-4 y estructura del programa TRIUMPH)</div>
+      </div></div>
+      <div class="ref"><span class="num">[39]</span><div>
+        <div class="cita">Pharmacy Times.</div>
+        <div class="obra">Retatrutide Delivers Significant Hemoglobin A1C Reduction, Weight Loss in Phase 3 Type 2 Diabetes Trial. 12 de junio de 2026.</div>
+        <div class="en">Citada en: §4.2 (cifras del comunicado de marzo de 2026 y contexto del programa TRANSCEND-T2D)</div>
+      </div></div>
+      <div class="ref"><span class="num">[43]</span><div>
+        <div class="cita">HCPLive.</div>
+        <div class="obra">ADA 2026 Recap: 5 Key Presentations to Know. 11 de junio de 2026.</div>
+        <div class="en">Citada en: §7 (contexto comparativo de SYNCHRONIZE-1, REIMAGINE y VESPER)</div>
+      </div></div>
+      <div class="ref"><span class="num">[44]</span><div>
+        <div class="cita">BioPharma Dive.</div>
+        <div class="obra">Lilly files six lawsuits in bid to shut down 'black market' for retatrutide. Agosto de 2026.</div>
+        <div class="en">Citada en: §8.3 (panel asesor de la FDA de julio de 2026 sobre péptidos)</div>
+      </div></div>
+      <div class="grupo">Nivel D — Fuentes secundarias, agregadoras o comerciales</div>
+      <p>Estas fuentes se citan cuando aportan detalle no disponible en fuentes de nivel superior. Cada cita en el cuerpo del documento indica explícitamente su condición. No deben usarse como referencia académica sin verificación contra la fuente primaria.</p>
+      <div class="ref"><span class="num">[20]</span><div>
+        <div class="cita">Lola Health.</div>
+        <div class="obra">Retatrutide Side Effects: Full Safety Data. 25 de abril de 2026.</div>
+        <div class="en">Citada en: §4.1 (incidencia de disestesia por dosis en TRIUMPH-4, n = 445), §6.3 (hipótesis mecanísticas)</div>
+      </div></div>
+      <div class="ref"><span class="num">[27]</span><div>
+        <div class="cita">Second Nature.</div>
+        <div class="obra">Retatrutide side effects: what the trials show and how to manage them. 12 de mayo de 2026.</div>
+        <div class="en">Citada en: §6.3 (componente glucagón y señal comparable con semaglutida 7,2 mg), §6.4 (≈6,7 lpm), §9</div>
+      </div></div>
+      <div class="ref"><span class="num">[28]</span><div>
+        <div class="cita">GLP Winner.</div>
+        <div class="obra">Grey-Market Peptide Quality: What Testing Found. 9 de mayo de 2026. Compila el estudio de JMIR sobre semaglutida de mercado gris y el análisis forense belga de péptidos falsificados incautados.</div>
+        <div class="en">Citada en: §5.5 (purezas medidas, endotoxinas, arsénico, plomo y tetrahidrofurano residual). Los estudios subyacentes son de nivel A pero se citan de forma indirecta.</div>
+      </div></div>
+      <div class="ref"><span class="num">[35]</span><div>
+        <div class="cita">Retatrutide Knowledge Base.</div>
+        <div class="obra">Clinical Trials. Rastreador del programa completo.</div>
+        <div class="en">Citada en: §2.3 (recuento de 19 ensayos y estructura en tres familias de fase 3: TRIUMPH, TRANSCEND y SYNERGY)</div>
+      </div></div>
+      <div class="ref"><span class="num">[40]</span><div>
+        <div class="cita">HealthRX.</div>
+        <div class="obra">Retatrutide Dosing in Hepatic Impairment. 26 de mayo de 2026.</div>
+        <div class="en">Citada en: §3.1 (verificación cruzada: n = 338, placebo −2,1 %), §6.5, §9</div>
+      </div></div>
+      <div class="ref"><span class="num">[41]</span><div>
+        <div class="cita">Swolverine.</div>
+        <div class="obra">Retatrutide Side Effects: Clinical Trial Data, Risks &amp; Safety Profile. 4 de septiembre de 2025.</div>
+        <div class="en">Citada en: §6.5 (parámetros de monitorización durante el escalado)</div>
+      </div></div>
+      <div class="ref"><span class="num">[42]</span><div>
+        <div class="cita">Retatrutide Knowledge Base.</div>
+        <div class="obra">Retatrutide for Type 2 Diabetes: TRANSCEND Trial Data. 3 de abril de 2026.</div>
+        <div class="en">Citada en: §7 (comparación cruzada con SURPASS y estado de TRANSCEND-T2D-2)</div>
+      </div></div>
+      <div class="ref"><span class="num">[47]</span><div>
+        <div class="cita">KRECE.</div>
+        <div class="obra">Péptidos RUO: qué es Research Use Only y por qué no es garantía. 6 de mayo de 2026.</div>
+        <div class="en">Citada en: §5.5 (falsificabilidad de los certificados de análisis y economía del testeo de lotes)</div>
+      </div></div>
+      <div class="ref"><span class="num">[48]</span><div>
+        <div class="cita">Parahealth.</div>
+        <div class="obra">Retatrutida Fase 3: programa TRIUMPH. 20 de abril de 2026.</div>
+        <div class="en">Citada en: §4.1 (cifras secundarias de TRIUMPH-4). Estas cifras no han sido verificadas contra publicación revisada por pares ni contra el comunicado original.</div>
+      </div></div>
+
+    </div>
+  </section>
+
+  </main>
+</div>
+
+<footer>
+  <div class="rot">Sobre este documento</div>
+  <p>Compilado el 31 de agosto de 2026 a partir de búsqueda en literatura biomédica, registros de ensayos clínicos, comunicados de patrocinador, alertas de autoridades sanitarias y prensa especializada. Todas las cifras citadas son trazables a la fuente indicada bajo cada bloque de datos.</p>
+  <p>Este dossier es material de referencia informativa; no constituye consejo médico ni sustituye la evaluación de un profesional de la salud. La retatrutida es un fármaco en investigación sin aprobación regulatoria en ninguna jurisdicción a la fecha de corte.</p>
+  <div class="cod" style="margin-top:8px">ELABÓ · PÉPTIDOS · DOSSIER DE EVIDENCIA · 31 AGO 2026</div>
+</footer>
+
+</body></html>

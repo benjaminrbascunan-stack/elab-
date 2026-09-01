@@ -70,6 +70,9 @@ nav a:hover{color:var(--negro)}
 .foto-ancho{aspect-ratio:4/3}
 .foto .frasco{width:24%;height:62%;background:#F0F3F4;border:.5px solid var(--gris-claro)}
 .foto figcaption{position:absolute;left:16px;bottom:14px;font-size:9px;letter-spacing:.12em;color:var(--tenue);text-transform:uppercase}
+.foto.real{background:none}
+.foto.real img{width:100%;height:100%;object-fit:cover;display:block}
+.pie-imagen{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--tenue);margin-top:10px}
 
 .cuerpo{position:relative}
 .escala{position:absolute;left:0;top:0;bottom:0;width:1px;background:var(--gris-claro)}
@@ -330,10 +333,13 @@ var ELABO_ACCESO_MIN = 20;
       </div>
     </div>
 
-    <figure class="foto foto-alto">
-      <div class="frasco"></div>
-      <figcaption>[Fotografía · vial 10 mg · luz dura · fondo de valor medio]</figcaption>
-    </figure>
+    <div>
+      <figure class="foto foto-alto real">
+        <img src="https://res.cloudinary.com/dml98dzwg/image/upload/v1788241938/imagen_de_inicio_yoaawm.webp"
+             alt="Los tres formatos de ELABÓ: E-10 y E-20 en polvo liofilizado y A-01 con agua bacteriostática">
+      </figure>
+      <p class="pie-imagen">Imagen referencial</p>
+    </div>
   </div>
 </div>
 

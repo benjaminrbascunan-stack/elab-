@@ -74,6 +74,7 @@ nav a:hover{color:var(--negro)}
 .cuerpo{position:relative}
 .escala{position:absolute;left:0;top:0;bottom:0;width:1px;background:var(--gris-claro)}
 .escala i{position:absolute;left:0;height:1px;background:var(--gris-claro);width:9px}
+.escala i.larga{width:15px;background:var(--gris-medio)}
 .marca-seccion{position:absolute;left:0;display:flex;align-items:center;gap:10px;transform:translateY(-50%)}
 .marca-seccion b{display:block;width:24px;height:1.5px;background:var(--negro)}
 .marca-seccion em{font-style:normal;font-size:10px;letter-spacing:.14em;color:var(--tenue);white-space:nowrap;text-transform:uppercase}
@@ -162,15 +163,30 @@ footer.pie{padding:56px 0 40px}
 .pie-grid li{list-style:none;margin-bottom:9px;font-size:13px;color:var(--gris-medio)}
 .legal{font-size:11px;color:var(--tenue);max-width:110ch;padding-top:24px;border-top:.5px solid var(--borde);line-height:1.7}
 
+.subnav{position:fixed;top:0;right:0;z-index:70;background:var(--negro);color:var(--blanco);display:flex;align-items:center;gap:26px;padding:0 0 0 26px;transform:translateY(-100%);transition:transform .25s ease}
+.subnav.visible{transform:translateY(0)}
+.subnav a{font-size:10px;letter-spacing:.14em;color:var(--oscuro-texto);text-transform:uppercase;padding:16px 0}
+.subnav a:hover{color:var(--blanco)}
+.subnav .comprar{background:var(--blanco);color:var(--negro);padding:16px 24px;margin-left:4px}
+.subnav .comprar:hover{color:var(--negro)}
+
 .barra{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--negro);color:var(--blanco)}
 .barra .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:14px;padding-bottom:14px}
 .barra .n{font-size:13px}
 .barra .m{font-size:10px;letter-spacing:.12em;color:var(--oscuro-texto);text-transform:uppercase}
 
-@media (max-width:1080px){
-  .secciones{padding-left:0}
-  .escala,.marca-seccion{display:none}
+@media (max-width:900px){
+  .secciones{padding-left:26px}
+  .marca-seccion{display:none}
+  .escala i{width:6px}
+  .escala i.larga{width:11px}
   .areas,.receptores{grid-template-columns:1fr 1fr}
+  .subnav{gap:0;padding-left:0}
+  .subnav a:not(.comprar){display:none}
+}
+@media (max-width:1180px) and (min-width:901px){
+  .secciones{padding-left:132px}
+  .marca-seccion em{font-size:9px}
 }
 @media (max-width:860px){
   .wrap{padding:0 24px}
@@ -201,6 +217,15 @@ footer.pie{padding:56px 0 40px}
     <a class="btn-linea-oscura" href="https://www.google.com">SALIR</a>
   </div>
 </div>
+
+<nav class="subnav" id="subnav" aria-label="Navegación fija">
+  <a href="#compuesto">Compuesto</a>
+  <a href="#mecanismo">Mecanismo</a>
+  <a href="#evidencia">Evidencia</a>
+  <a href="#catalogo">Catálogo</a>
+  <a href="#preguntas">Preguntas</a>
+  <a class="comprar" href="#catalogo">Comprar</a>
+</nav>
 
 <header>
   <div class="wrap">
@@ -242,8 +267,8 @@ footer.pie{padding:56px 0 40px}
 
       <div class="precio" data-cfg="precioSel"></div>
       <div class="selector">
-        <button class="opcion" aria-pressed="true" data-sku="p10">RT-X10 · 10 MG</button>
-        <button class="opcion" aria-pressed="false" data-sku="p20">RT-X20 · 20 MG</button>
+        <button class="opcion" aria-pressed="true" data-sku="p10">E-10</button>
+        <button class="opcion" aria-pressed="false" data-sku="p20">E-20</button>
       </div>
 
       <div class="agregado">
@@ -429,18 +454,18 @@ footer.pie{padding:56px 0 40px}
         <p class="intro">Mismo compuesto y misma pureza en ambos viales. Solo cambia el contenido en miligramos.</p>
         <div class="catalogo">
           <div class="item">
-            <figure class="foto foto-ancho"><div class="frasco"></div><figcaption>[Fotografía · RT-X10]</figcaption></figure>
+            <figure class="foto foto-ancho"><div class="frasco"></div><figcaption>[Fotografía · E-10]</figcaption></figure>
             <div class="etiqueta">Compuesto</div>
-            <h3>RT-X10 · 10 mg</h3>
+            <h3>ELABÓ · E-10</h3>
             <p class="desc">Vial de 10 mg en polvo liofilizado. Pureza superior al 99% por HPLC, con certificado de análisis del lote.</p>
             <div class="item-datos"><span class="dato-sec">Contenido</span><span class="dato">10 mg</span></div>
             <div class="item-datos"><span class="dato-sec">Precio</span><span class="dato" data-cfg="p10Precio"></span></div>
             <a class="btn-linea" href="#">AGREGAR AL CARRO</a>
           </div>
           <div class="item">
-            <figure class="foto foto-ancho"><div class="frasco"></div><figcaption>[Fotografía · RT-X20]</figcaption></figure>
+            <figure class="foto foto-ancho"><div class="frasco"></div><figcaption>[Fotografía · E-20]</figcaption></figure>
             <div class="etiqueta">Compuesto</div>
-            <h3>RT-X20 · 20 mg</h3>
+            <h3>ELABÓ · E-20</h3>
             <p class="desc">Vial de 20 mg en polvo liofilizado. Mismo lote de origen y misma pureza que la presentación de 10 mg.</p>
             <div class="item-datos"><span class="dato-sec">Contenido</span><span class="dato">20 mg</span></div>
             <div class="item-datos"><span class="dato-sec">Precio</span><span class="dato" data-cfg="p20Precio"></span></div>
@@ -462,7 +487,7 @@ footer.pie{padding:56px 0 40px}
         <div class="marca-inline">09 · Preguntas</div>
         <h2>Antes de comprar.</h2>
         <div class="faq">
-          <details><summary>¿Qué diferencia hay entre RT-X10 y RT-X20?</summary><p>Solo el contenido: 10 mg y 20 mg respectivamente. El compuesto, la pureza declarada y el lote de origen son los mismos.</p></details>
+          <details><summary>¿Qué diferencia hay entre E-10 y E-20?</summary><p>Solo el contenido: 10 mg y 20 mg respectivamente. El compuesto, la pureza declarada y el lote de origen son los mismos.</p></details>
           <details><summary>¿Qué es el certificado de análisis?</summary><p>Es el documento que acompaña a cada lote. Permite verificar la pureza medida por HPLC, la información del lote y la trazabilidad del producto. Se entrega con la compra.</p></details>
           <details><summary>¿Qué significa que sea un triple agonista?</summary><p>Que activa simultáneamente los receptores GIP, GLP-1 y de glucagón. Los agonistas simples actúan sobre GLP-1 y los duales sobre GIP y GLP-1.</p></details>
           <details><summary>¿El compuesto está aprobado?</summary><p>No. Se encuentra en investigación clínica y no cuenta con aprobación de la FDA ni del ISP. Se comercializa bajo declaración de uso exclusivo para investigación científica.</p></details>
@@ -498,7 +523,7 @@ footer.pie{padding:56px 0 40px}
           <div class="bajada">PÉPTIDOS</div>
         </div>
       </div>
-      <div><h3>Catálogo</h3><ul><li>RT-X10 · 10 mg</li><li>RT-X20 · 20 mg</li><li data-cfg="actNombre"></li><li>Certificados de lote</li></ul></div>
+      <div><h3>Catálogo</h3><ul><li>E-10 · 10 mg</li><li>E-20 · 20 mg</li><li data-cfg="actNombre"></li><li>Certificados de lote</li></ul></div>
       <div><h3>Información</h3><ul><li>Envío y devoluciones</li><li>Términos y condiciones</li><li>Política de privacidad</li><li>Contacto</li></ul></div>
     </div>
     <p class="legal">Fuentes citadas: Jastreboff et al., The New England Journal of Medicine (2023); Coskun et al., Journal of Medicinal Chemistry (2022); Sloop et al., Cell Metabolism (2022). Compuesto destinado exclusivamente a investigación científica. No apto para consumo humano ni veterinario. Acceso restringido a mayores de 18 años. [Identificación del titular, RUT y dirección.] © 2026 ELABÓ · Santiago, Chile</p>
@@ -521,8 +546,8 @@ footer.pie{padding:56px 0 40px}
    CONFIGURACIÓN — editar solo aquí
    ========================================================= */
 var CONFIG = {
-  p10: { sku:'RT-X10', contenido:'10 mg por vial', precio:'$[PRECIO]' },
-  p20: { sku:'RT-X20', contenido:'20 mg por vial', precio:'$[PRECIO]' },
+  p10: { sku:'E-10', contenido:'10 mg por vial', precio:'$[PRECIO]' },
+  p20: { sku:'E-20', contenido:'20 mg por vial', precio:'$[PRECIO]' },
 
   complemento: {
     nombre:      'Diluyente',
@@ -582,10 +607,12 @@ var CONFIG = {
     escala.innerHTML = '';
     for(var k=0;k<marcas.length;k++){ marcas[k].parentNode.removeChild(marcas[k]); }
     marcas = [];
-    var alto = cuerpo.offsetHeight;
+    var alto = cuerpo.offsetHeight, c = 0;
     for(var y = 0; y < alto; y += 22){
       var t = document.createElement('i');
       t.style.top = y + 'px';
+      if(c % 5 === 0){ t.className = 'larga'; }
+      c++;
       escala.appendChild(t);
     }
     var base = cuerpo.getBoundingClientRect().top + window.scrollY;
@@ -607,9 +634,22 @@ var CONFIG = {
       if(k === idx){ marcas[k].classList.add('activa'); } else { marcas[k].classList.remove('activa'); }
     }
   }
+  var subnav = document.getElementById('subnav');
+  function flotante(){
+    var limite = document.querySelector('.hero').getBoundingClientRect().bottom + window.scrollY;
+    if(window.scrollY > limite - 80){ subnav.classList.add('visible'); }
+    else { subnav.classList.remove('visible'); }
+  }
+  window.addEventListener('scroll', flotante, {passive:true});
+  flotante();
+
+  escalar(); activa();
   window.addEventListener('load', function(){ escalar(); activa(); });
   window.addEventListener('resize', function(){ escalar(); activa(); });
   window.addEventListener('scroll', activa, {passive:true});
+  if(document.fonts && document.fonts.ready){
+    document.fonts.ready.then(function(){ escalar(); activa(); });
+  }
 })();
 </script>
 </body>

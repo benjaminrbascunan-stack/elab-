@@ -152,6 +152,10 @@ section.bloque{padding:72px 0;border-bottom:.5px solid var(--borde);scroll-margi
 .faq details[open] summary::after{content:"–"}
 .faq p{padding:0 0 20px;color:var(--gris-medio);max-width:72ch;font-size:14px}
 
+.ref{display:inline-flex;align-items:baseline;gap:10px;margin-top:22px;padding-bottom:3px;border-bottom:.5px solid var(--gris-claro);font-size:13px;color:var(--gris-medio);transition:color .18s ease,border-color .18s ease}
+.ref:hover{color:var(--negro);border-color:var(--negro)}
+.ref b{font-weight:400;color:var(--negro)}
+
 .aviso{margin-top:56px;border:.5px solid var(--negro);padding:28px 30px}
 .aviso h3{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:400;margin-bottom:12px}
 .aviso p{font-size:13px;color:var(--gris-medio);max-width:88ch;margin-bottom:10px}
@@ -170,6 +174,15 @@ footer.pie{padding:56px 0 40px}
 .subnav .comprar{background:var(--blanco);color:var(--negro);padding:16px 24px;margin-left:4px}
 .subnav .comprar:hover{color:var(--negro)}
 
+.menu-btn{display:none;flex-direction:column;gap:5px;padding:18px 20px;cursor:pointer}
+.menu-btn span{display:block;width:18px;height:1.2px;background:var(--blanco)}
+
+#indice{position:fixed;inset:0;z-index:90;background:var(--negro);color:var(--blanco);display:none;flex-direction:column;justify-content:center;padding:40px 28px}
+#indice.abierto{display:flex}
+#indice a{display:flex;align-items:baseline;gap:14px;font-size:22px;padding:16px 0;border-bottom:.5px solid var(--oscuro-linea);color:var(--blanco)}
+#indice a i{font-style:normal;font-size:10px;letter-spacing:.14em;color:var(--oscuro-texto)}
+#indice .cerrar{position:absolute;top:28px;right:28px;font-size:11px;letter-spacing:.14em;color:var(--oscuro-texto);text-transform:uppercase}
+
 .barra{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--negro);color:var(--blanco)}
 .barra .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:14px;padding-bottom:14px}
 .barra .n{font-size:13px}
@@ -183,6 +196,7 @@ footer.pie{padding:56px 0 40px}
   .areas,.receptores{grid-template-columns:1fr 1fr}
   .subnav{gap:0;padding-left:0}
   .subnav a:not(.comprar){display:none}
+  .menu-btn{display:flex}
 }
 @media (max-width:1180px) and (min-width:901px){
   .secciones{padding-left:132px}
@@ -218,7 +232,21 @@ footer.pie{padding:56px 0 40px}
   </div>
 </div>
 
+<div id="indice">
+  <button class="cerrar" id="cerrarIndice">Cerrar</button>
+  <a href="#compuesto"><i>01</i>El compuesto</a>
+  <a href="#mecanismo"><i>02</i>Mecanismo</a>
+  <a href="#evidencia"><i>03</i>La evidencia</a>
+  <a href="#investigacion"><i>04</i>Investigación</a>
+  <a href="#manejo"><i>05</i>Conservación</a>
+  <a href="#datos"><i>06</i>Datos del ensayo</a>
+  <a href="#resenas"><i>07</i>Reseñas</a>
+  <a href="#catalogo"><i>08</i>Catálogo</a>
+  <a href="#preguntas"><i>09</i>Preguntas</a>
+</div>
+
 <nav class="subnav" id="subnav" aria-label="Navegación fija">
+  <button class="menu-btn" id="abrirIndice" aria-label="Abrir índice"><span></span><span></span></button>
   <a href="#compuesto">Compuesto</a>
   <a href="#mecanismo">Mecanismo</a>
   <a href="#evidencia">Evidencia</a>
@@ -391,6 +419,8 @@ footer.pie{padding:56px 0 40px}
           </div>
         </div>
         <p class="nota">Cuadro lleno indica evidencia publicada en literatura revisada por pares. Cuadro vacío indica ausencia de demostración o de aprobación. Los datos científicos citados corresponden a literatura sobre el compuesto y no constituyen una afirmación de efectividad de un producto comercial específico.</p>
+        <a class="ref" href="elabo-dossier.html"><b>Dossier de evidencia clínica</b> · 35 fuentes citadas →</a>
+
       </section>
 
       <section class="bloque" id="investigacion">
@@ -596,6 +626,15 @@ var CONFIG = {
   });
 
   pintar();
+
+  var indice = document.getElementById('indice');
+  function abrirIdx(){ indice.classList.add('abierto'); document.body.style.overflow='hidden'; }
+  function cerrarIdx(){ indice.classList.remove('abierto'); document.body.style.overflow=''; }
+  document.getElementById('abrirIndice').addEventListener('click', abrirIdx);
+  document.getElementById('cerrarIndice').addEventListener('click', cerrarIdx);
+  var idxLinks = indice.querySelectorAll('a');
+  for(var w=0;w<idxLinks.length;w++){ idxLinks[w].addEventListener('click', cerrarIdx); }
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ cerrarIdx(); } });
 
   var internos = document.querySelectorAll('a[href^="#"]');
   for(var q=0;q<internos.length;q++){

@@ -190,6 +190,28 @@ footer.pie{padding:56px 0 40px}
 #indice a i{font-style:normal;font-size:10px;letter-spacing:.14em;color:var(--oscuro-texto)}
 #indice .cerrar{position:absolute;top:28px;right:28px;font-size:11px;letter-spacing:.14em;color:var(--oscuro-texto);text-transform:uppercase}
 
+/* --- ritmo: sección a sangre --- */
+.sangre{margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);padding-left:calc(50vw - 50% + 0px);padding-right:calc(50vw - 50%);background:var(--superficie)}
+.sangre .marca-inline,.sangre h2,.sangre .intro{max-width:none}
+
+/* --- momento de respiro --- */
+.respiro{padding:120px 0;border-bottom:.5px solid var(--borde)}
+.respiro p{font-size:38px;line-height:1.15;letter-spacing:-.015em;max-width:22ch}
+.respiro .marca-inline{margin-bottom:22px}
+
+/* --- foto atmosférica a sangre --- */
+.atmosfera{margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);width:100vw;aspect-ratio:21/9;overflow:hidden;background:var(--superficie)}
+.atmosfera img{width:100%;height:100%;object-fit:cover;display:block}
+
+/* --- graduación como separador --- */
+.grad-sep{display:flex;align-items:flex-end;gap:6px;height:16px;margin:44px 0}
+.grad-sep i{display:block;width:1px;height:6px;background:var(--gris-claro)}
+.grad-sep i.l{height:14px;background:var(--gris-medio)}
+
+/* --- acordeón de sección en móvil --- */
+.plegable > .cuerpo-seccion{display:block}
+.plegable > .abrir{display:none}
+
 .barra{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--negro);color:var(--blanco)}
 .barra .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:14px;padding-bottom:14px}
 .barra .n{font-size:13px}
@@ -209,6 +231,32 @@ footer.pie{padding:56px 0 40px}
   .secciones{padding-left:132px}
   .marca-seccion em{font-size:9px}
 }
+
+@media (max-width:860px){
+  body{font-size:16px;line-height:1.65}
+  section.bloque{padding:46px 0}
+  .bloque h2{font-size:25px;line-height:1.2}
+  .bloque .intro{font-size:15px;margin-top:12px}
+  .marca-inline{font-size:11px;margin-bottom:12px}
+  .datos-lista dd,.receptor li,.ev-fila p,.faq p,.faq summary,.item .desc,.cuidado p,.area p,.resena p{font-size:15px}
+  .ev-fila small{font-size:14px}
+  .tabla{font-size:14px}
+  .respiro{padding:72px 0}
+  .respiro p{font-size:27px}
+  .atmosfera{aspect-ratio:4/3}
+  .sangre{padding-left:24px;padding-right:24px}
+  .grad-sep{margin:32px 0}
+
+  /* secciones densas plegadas por defecto */
+  .plegable > .cuerpo-seccion{display:none}
+  .plegable.desplegada > .cuerpo-seccion{display:block}
+  .plegable > .abrir{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;
+    margin-top:20px;padding:15px 0;border-top:.5px solid var(--negro);border-bottom:.5px solid var(--borde);
+    font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gris-medio);text-align:left}
+  .plegable > .abrir::after{content:"+";font-size:15px;color:var(--negro)}
+  .plegable.desplegada > .abrir::after{content:"–"}
+}
+
 @media (max-width:860px){
   .wrap{padding:0 24px}
   .datos-dos{grid-template-columns:1fr;column-gap:0}
@@ -375,10 +423,12 @@ var ELABO_ACCESO_MIN = 20;
         </dl>
       </section>
 
-      <section class="bloque" id="mecanismo">
+      <section class="bloque plegable sangre" id="mecanismo">
         <div class="marca-inline">02 · Mecanismo</div>
         <h2>Triple agonismo, tres rutas simultáneas.</h2>
         <p class="intro">Los valores de EC50 provienen de ensayos de cAMP in vitro descritos en la literatura. En los tres receptores la actividad reportada es de agonista total.</p>
+        <button class="abrir" type="button">Ver los tres receptores</button>
+        <div class="cuerpo-seccion">
         <div class="receptores">
           <div class="receptor">
             <h3>GLP-1R</h3>
@@ -404,11 +454,13 @@ var ELABO_ACCESO_MIN = 20;
           <tr><td>Liraglutida</td><td>Agonista GLP-1</td><td>≈ 13 horas</td></tr>
         </table>
         <p class="nota">Comparación de clase y farmacocinética descrita en literatura. No constituye comparación de eficacia: los estudios de cada compuesto tienen diseños, poblaciones y duraciones distintas.</p>
+        </div>
       </section>
 
       <section class="bloque" id="catalogo">
         <div class="marca-inline">03 · Catálogo</div>
         <h2>Dos presentaciones y el agua bacteriostática.</h2>
+        <div class="grad-sep"><i class="l"></i><i></i><i></i><i></i><i></i><i class="l"></i><i></i><i></i><i></i><i></i><i class="l"></i><i></i><i></i><i></i><i></i><i class="l"></i><i></i><i></i><i></i><i></i><i class="l"></i><i></i><i></i><i></i><i></i><i class="l"></i><i></i><i></i><i></i><i></i><i class="l"></i><i></i><i></i><i></i><i></i><i class="l"></i><i></i><i></i><i></i><i></i><i class="l"></i></div>
         <p class="intro">Mismo compuesto y misma pureza en ambos viales. Solo cambia el contenido en miligramos. El agua bacteriostática se vende por separado.</p>
         <div class="catalogo">
           <div class="item">
@@ -441,10 +493,12 @@ var ELABO_ACCESO_MIN = 20;
         </div>
       </section>
 
-      <section class="bloque" id="evidencia">
+      <section class="bloque plegable" id="evidencia">
         <div class="marca-inline">04 · La evidencia</div>
         <h2>Qué dice la literatura y qué no dice.</h2>
         <p class="intro">La evidencia disponible corresponde a investigación clínica en curso. Un compuesto puede tener respaldo publicado en un aspecto y ninguno en otro, y esa distinción es el dato más relevante antes de cualquier decisión.</p>
+        <button class="abrir" type="button">Ver la tabla de evidencia</button>
+        <div class="cuerpo-seccion">
         <div class="evidencia">
           <div class="ev-fila">
             <span class="cuadro lleno"></span>
@@ -480,6 +534,12 @@ var ELABO_ACCESO_MIN = 20;
         <p class="nota">Cuadro lleno indica evidencia publicada en literatura revisada por pares. Cuadro vacío indica ausencia de demostración o de aprobación. Los datos científicos citados corresponden a literatura sobre el compuesto y no constituyen una afirmación de efectividad de un producto comercial específico.</p>
         <a class="ref" href="elabo-dossier.html"><b>Dossier de evidencia clínica</b> · 35 fuentes citadas →</a>
 
+        </div>
+      </section>
+
+      <section class="bloque respiro">
+        <div class="marca-inline">—</div>
+        <p>Tres receptores activados al mismo tiempo. Un solo compuesto.</p>
       </section>
 
       <section class="bloque" id="investigacion">
@@ -493,10 +553,12 @@ var ELABO_ACCESO_MIN = 20;
         </div>
       </section>
 
-      <section class="bloque" id="manejo">
+      <section class="bloque plegable" id="manejo">
         <div class="marca-inline">06 · Conservación</div>
         <h2>El liofilizado es estable, la solución no.</h2>
         <p class="intro">Condiciones de conservación del producto cerrado, según la información del proveedor.</p>
+        <button class="abrir" type="button">Ver condiciones de conservación</button>
+        <div class="cuerpo-seccion">
         <div class="cuidados">
           <div class="cuidado"><h3>Antes de abrir</h3><p>Mantener refrigerado. Permitir que el vial alcance temperatura ambiente antes de manipularlo.</p></div>
           <div class="cuidado"><h3>Luz</h3><p>Proteger de la luz directa. Conservar en su estuche.</p></div>
@@ -506,12 +568,15 @@ var ELABO_ACCESO_MIN = 20;
           <div class="marca-pend">Sección pendiente</div>
           <p>[Procedimiento de reconstitución y equivalencias. Contenedor montado, admite hasta seis pasos numerados y una tabla de dos columnas.]</p>
         </div>
+        </div>
       </section>
 
-      <section class="bloque" id="datos">
+      <section class="bloque plegable" id="datos">
         <div class="marca-inline">07 · Datos del ensayo</div>
         <h2>Fase 2, 338 participantes, 48 semanas.</h2>
         <p class="intro">Referencia: Jastreboff et al., The New England Journal of Medicine, 2023. Ensayo clínico aleatorizado y controlado.</p>
+        <button class="abrir" type="button">Ver datos del ensayo</button>
+        <div class="cuerpo-seccion">
         <table class="tabla">
           <tr><th>Parámetro</th><th>Valor</th></tr>
           <tr><td>Fase</td><td>2</td></tr>
@@ -524,7 +589,13 @@ var ELABO_ACCESO_MIN = 20;
           <div class="marca-pend">Sección pendiente</div>
           <p>[Tabla de resultados por cohorte. Contenedor montado, admite una tabla de dos columnas y hasta ocho filas.]</p>
         </div>
+        </div>
       </section>
+
+      <figure class="atmosfera">
+        <img src="https://res.cloudinary.com/dml98dzwg/image/upload/v1788243958/rt_10_y_20_apaisado_wnwa42.webp"
+             alt="Detalle de los viales de ELABÓ">
+      </figure>
 
       <section class="bloque" id="resenas">
         <div class="marca-inline">08 · Reseñas</div>
@@ -653,6 +724,14 @@ var CONFIG = {
 
   pintar();
 
+
+  var plegables = document.querySelectorAll('.plegable > .abrir');
+  for(var pz=0; pz<plegables.length; pz++){
+    plegables[pz].addEventListener('click', function(){
+      this.parentNode.classList.toggle('desplegada');
+    });
+  }
+
   var indice = document.getElementById('indice');
   function abrirIdx(){ indice.classList.add('abierto'); document.body.style.overflow='hidden'; }
   function cerrarIdx(){ indice.classList.remove('abierto'); document.body.style.overflow=''; }
@@ -671,7 +750,7 @@ var CONFIG = {
 
   var escala = document.getElementById('escala');
   var cuerpo = escala.parentElement;
-  var secciones = Array.prototype.slice.call(cuerpo.querySelectorAll('section.bloque'));
+  var secciones = Array.prototype.slice.call(cuerpo.querySelectorAll('section.bloque[id]'));
   var nombres = ['01 El compuesto','02 Mecanismo','03 Catálogo','04 La evidencia','05 Investigación','06 Conservación','07 Datos del ensayo','08 Reseñas','09 Preguntas'];
   var marcas = [];
 

@@ -81,7 +81,7 @@ nav a:hover{color:var(--negro)}
 .marca-seccion.activa em{color:var(--negro)}
 .secciones{padding-left:180px}
 
-section.bloque{padding:72px 0;border-bottom:.5px solid var(--borde)}
+section.bloque{padding:72px 0;border-bottom:.5px solid var(--borde);scroll-margin-top:96px}
 .bloque h2{font-size:30px;line-height:1.15;font-weight:400;letter-spacing:-.01em;max-width:24ch}
 .bloque .intro{color:var(--gris-medio);margin-top:14px;max-width:60ch}
 .marca-inline{font-size:10px;letter-spacing:.14em;color:var(--tenue);text-transform:uppercase;margin-bottom:14px}
@@ -450,8 +450,8 @@ footer.pie{padding:56px 0 40px}
 
       <section class="bloque" id="catalogo">
         <div class="marca-inline">08 · Catálogo</div>
-        <h2>Dos presentaciones y el diluyente.</h2>
-        <p class="intro">Mismo compuesto y misma pureza en ambos viales. Solo cambia el contenido en miligramos.</p>
+        <h2>Dos presentaciones y el agua bacteriostática.</h2>
+        <p class="intro">Mismo compuesto y misma pureza en ambos viales. Solo cambia el contenido en miligramos. El agua bacteriostática se vende por separado.</p>
         <div class="catalogo">
           <div class="item">
             <figure class="foto foto-ancho"><div class="frasco"></div><figcaption>[Fotografía · E-10]</figcaption></figure>
@@ -472,11 +472,11 @@ footer.pie{padding:56px 0 40px}
             <a class="btn-linea" href="#">AGREGAR AL CARRO</a>
           </div>
           <div class="item">
-            <figure class="foto foto-ancho"><div class="frasco"></div><figcaption>[Fotografía · diluyente]</figcaption></figure>
+            <figure class="foto foto-ancho"><div class="frasco"></div><figcaption>[Fotografía · A-01]</figcaption></figure>
             <div class="etiqueta">Complemento</div>
             <h3>ELABÓ · <span data-cfg="actNombreCorto"></span></h3>
-            <p class="desc">Disponible en tres volúmenes. Se vende por separado y no se incluye con el compuesto.</p>
-            <div class="item-datos"><span class="dato-sec">Volúmenes</span><span class="dato" data-cfg="actVolumen"></span></div>
+            <p class="desc">Agua bacteriostática estéril. Se vende por separado y no se incluye con el compuesto.</p>
+            <div class="item-datos"><span class="dato-sec">Volumen</span><span class="dato" data-cfg="actVolumen"></span></div>
             <div class="item-datos"><span class="dato-sec">Desde</span><span class="dato" data-cfg="actPrecio"></span></div>
             <a class="btn-linea" href="#">VER OPCIONES</a>
           </div>
@@ -550,9 +550,9 @@ var CONFIG = {
   p20: { sku:'E-20', contenido:'20 mg por vial', precio:'$[PRECIO]' },
 
   complemento: {
-    nombre:      'Diluyente',
-    nombreCorto: 'Diluyente',
-    volumen:     '3 · 6 · 10 ml',   // EDITABLE
+    nombre:      'A-01 · agua bacteriostática',
+    nombreCorto: 'A-01',
+    volumen:     '[V] ml',          // EDITABLE — confirmar volumen real
     precio:      '$[PRECIO]'
   }
 };
@@ -597,6 +597,13 @@ var CONFIG = {
 
   pintar();
 
+  var internos = document.querySelectorAll('a[href^="#"]');
+  for(var q=0;q<internos.length;q++){
+    internos[q].addEventListener('click', function(){
+      ultimo = window.scrollY + 9999;
+    });
+  }
+
   var escala = document.getElementById('escala');
   var cuerpo = escala.parentElement;
   var secciones = Array.prototype.slice.call(cuerpo.querySelectorAll('section.bloque'));
@@ -635,10 +642,16 @@ var CONFIG = {
     }
   }
   var subnav = document.getElementById('subnav');
+  var ultimo = window.scrollY;
   function flotante(){
-    var limite = document.querySelector('.hero').getBoundingClientRect().bottom + window.scrollY;
-    if(window.scrollY > limite - 80){ subnav.classList.add('visible'); }
-    else { subnav.classList.remove('visible'); }
+    var y = window.scrollY;
+    var limite = document.querySelector('.hero').getBoundingClientRect().bottom + y;
+    var pasado = y > limite - 80;
+    var subiendo = y < ultimo - 4;
+    var bajando  = y > ultimo + 4;
+    if(pasado && subiendo){ subnav.classList.add('visible'); }
+    if(bajando || !pasado){ subnav.classList.remove('visible'); }
+    if(Math.abs(y - ultimo) > 4){ ultimo = y; }
   }
   window.addEventListener('scroll', flotante, {passive:true});
   flotante();

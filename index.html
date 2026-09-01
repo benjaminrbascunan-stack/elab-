@@ -89,6 +89,10 @@ section.bloque{padding:72px 0;border-bottom:.5px solid var(--borde);scroll-margi
 .bloque .intro{color:var(--gris-medio);margin-top:14px;max-width:60ch}
 .marca-inline{font-size:10px;letter-spacing:.14em;color:var(--tenue);text-transform:uppercase;margin-bottom:14px}
 
+.foto-panoramica{aspect-ratio:16/9;margin-top:38px}
+.pie-foto{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--tenue);margin-top:10px}
+.datos-dos{margin-top:34px;display:grid;grid-template-columns:1fr 1fr;column-gap:48px;border-top:.5px solid var(--borde)}
+
 .activo-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;margin-top:36px;align-items:start}
 .datos-lista{border-top:.5px solid var(--borde)}
 .datos-lista div{padding:12px 0;border-bottom:.5px solid var(--borde)}
@@ -207,6 +211,8 @@ footer.pie{padding:56px 0 40px}
 }
 @media (max-width:860px){
   .wrap{padding:0 24px}
+  .datos-dos{grid-template-columns:1fr;column-gap:0}
+  .foto-panoramica{aspect-ratio:3/2;margin-top:28px}
   .hero{grid-template-columns:1fr;gap:36px;padding:32px 0 52px}
   .hero h1{font-size:36px}
   .activo-grid,.catalogo,.resenas,.pie-grid,.cuidados,.areas,.receptores{grid-template-columns:1fr}
@@ -352,21 +358,21 @@ var ELABO_ACCESO_MIN = 20;
         <div class="marca-inline">01 · El compuesto</div>
         <h2>Un péptido sintético de 39 aminoácidos.</h2>
         <p class="intro">Retatrutide es un péptido sintético en investigación clínica avanzada. Su particularidad es que activa simultáneamente tres receptores, a diferencia de los agonistas simples que actúan sobre GLP-1 y de los duales que actúan sobre GIP y GLP-1.</p>
-        <div class="activo-grid">
-          <figure class="foto foto-ancho real">
-            <img src="https://res.cloudinary.com/dml98dzwg/image/upload/v1788243179/rt_10_iwdj5m.webp" alt="Detalle del vial E-10 de ELABÓ">
-          </figure>
-          <dl class="datos-lista">
-            <div><dt>Compuesto</dt><dd>Retatrutide (RT)</dd></div>
-            <div><dt>Código de desarrollo</dt><dd>LY3437943</dd></div>
-            <div><dt>CAS</dt><dd>2381089-83-2</dd></div>
-            <div><dt>Peso molecular</dt><dd>≈ 4.731,32 g/mol</dd></div>
-            <div><dt>Longitud</dt><dd>Cadena de 39 aminoácidos</dd></div>
-            <div><dt>Forma</dt><dd>Polvo liofilizado</dd></div>
-            <div><dt>Pureza</dt><dd>+99% por HPLC</dd></div>
-            <div><dt>Vida media descrita</dt><dd>≈ 6 días</dd></div>
-          </dl>
-        </div>
+        <figure class="foto foto-panoramica real">
+          <img src="https://res.cloudinary.com/dml98dzwg/image/upload/v1788243958/rt_10_y_20_apaisado_wnwa42.webp"
+               alt="Los viales E-10 y E-20 de ELABÓ lado a lado: misma fórmula, el doble de contenido en el segundo">
+        </figure>
+        <p class="pie-foto">E-10 y E-20 · mismo compuesto, el doble de contenido</p>
+        <dl class="datos-lista datos-dos">
+          <div><dt>Compuesto</dt><dd>Retatrutide (RT)</dd></div>
+          <div><dt>Código de desarrollo</dt><dd>LY3437943</dd></div>
+          <div><dt>CAS</dt><dd>2381089-83-2</dd></div>
+          <div><dt>Peso molecular</dt><dd>≈ 4.731,32 g/mol</dd></div>
+          <div><dt>Longitud</dt><dd>Cadena de 39 aminoácidos</dd></div>
+          <div><dt>Forma</dt><dd>Polvo liofilizado</dd></div>
+          <div><dt>Pureza</dt><dd>+99% por HPLC</dd></div>
+          <div><dt>Vida media descrita</dt><dd>≈ 6 días</dd></div>
+        </dl>
       </section>
 
       <section class="bloque" id="mecanismo">

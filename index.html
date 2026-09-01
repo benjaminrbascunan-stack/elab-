@@ -255,6 +255,19 @@ footer.pie{padding:56px 0 40px}
   <a class="comprar" href="#catalogo">Comprar</a>
 </nav>
 
+<script>
+/* Vigencia del acceso: 20 minutos */
+var ELABO_ACCESO_MIN = 20;
+(function(){
+  try{
+    var t = parseInt(localStorage.getItem('elabo_acceso'), 10);
+    if(t && (Date.now() - t) < ELABO_ACCESO_MIN * 60 * 1000){
+      document.getElementById('puerta').classList.add('oculta');
+    }
+  }catch(e){}
+})();
+</script>
+
 <header>
   <div class="wrap">
     <div class="header-fila">
@@ -623,6 +636,7 @@ var CONFIG = {
   document.getElementById('addAct').addEventListener('change', pintar);
   document.getElementById('entrar').addEventListener('click', function(){
     document.getElementById('puerta').classList.add('oculta');
+    try{ localStorage.setItem('elabo_acceso', Date.now()); }catch(e){}
   });
 
   pintar();

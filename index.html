@@ -216,6 +216,30 @@ footer.pie{padding:56px 0 40px}
 .plegable > .cuerpo-seccion{display:block}
 .plegable > .abrir{display:none}
 
+@media (max-width:860px){
+  /* encabezado oscuro y compacto */
+  header{background:var(--negro);padding:0}
+  header .wrap{padding:0 20px}
+  .header-fila{flex-direction:row;align-items:center;justify-content:space-between;gap:14px;padding:13px 0}
+  header .rule{display:none}
+  .marca-bloque{width:76px}
+  .marca-bloque svg text{fill:#F5F7F8}
+  .marca-bloque svg line{stroke:#F5F7F8}
+  .marca-bloque .bajada{color:var(--oscuro-texto);font-size:5.5px;letter-spacing:.52em;text-indent:.52em;margin-top:1px}
+  header nav{gap:16px}
+  header nav a{font-size:9px;letter-spacing:.12em;color:var(--oscuro-texto)}
+  header nav a[href="#compuesto"],header nav a[href="#mecanismo"]{display:none}
+  header .btn-oscuro{background:var(--blanco);color:var(--negro);padding:9px 15px;font-size:9px}
+
+  /* el rótulo de sección se comporta como la escala de escritorio */
+  .marca-inline{display:flex;align-items:center;gap:9px;color:var(--tenue);
+    transition:color .3s ease,font-size .3s ease,letter-spacing .3s ease}
+  .marca-inline::before{content:"";display:block;width:14px;height:1px;background:var(--gris-medio);
+    transition:width .3s ease,height .3s ease,background .3s ease}
+  .bloque.en-vista .marca-inline{color:var(--negro);font-size:13px;letter-spacing:.1em}
+  .bloque.en-vista .marca-inline::before{width:26px;height:2px;background:var(--negro)}
+}
+
 .barra{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--negro);color:var(--blanco)}
 .barra .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:14px;padding-bottom:14px}
 .barra .n{font-size:13px}
@@ -425,7 +449,7 @@ var ELABO_ACCESO_MIN = 20;
         </dl>
       </section>
 
-      <section class="bloque plegable sangre" id="mecanismo">
+      <section class="bloque plegable" id="mecanismo">
         <div class="marca-inline">02 · Mecanismo</div>
         <h2>Triple agonismo, tres rutas simultáneas.</h2>
         <p class="intro">Los valores de EC50 provienen de ensayos de cAMP in vitro descritos en la literatura. En los tres receptores la actividad reportada es de agonista total.</p>
@@ -459,7 +483,7 @@ var ELABO_ACCESO_MIN = 20;
         </div>
       </section>
 
-      <section class="bloque" id="catalogo">
+      <section class="bloque sangre" id="catalogo">
         <div class="marca-inline">03 · Catálogo</div>
         <h2>Dos presentaciones y el agua bacteriostática.</h2>
         <div class="grad-sep"><i class="l"></i><i></i><i></i><i></i><i></i><i class="l"></i><i></i><i></i><i></i><i></i><i class="l"></i><i></i><i></i><i></i><i></i><i class="l"></i><i></i><i></i><i></i><i></i><i class="l"></i><i></i><i></i><i></i><i></i><i class="l"></i><i></i><i></i><i></i><i></i><i class="l"></i><i></i><i></i><i></i><i></i><i class="l"></i><i></i><i></i><i></i><i></i><i class="l"></i></div>
@@ -781,6 +805,9 @@ var CONFIG = {
     }
     for(var k=0;k<marcas.length;k++){
       if(k === idx){ marcas[k].classList.add('activa'); } else { marcas[k].classList.remove('activa'); }
+    }
+    for(var v=0;v<secciones.length;v++){
+      if(v === idx){ secciones[v].classList.add('en-vista'); } else { secciones[v].classList.remove('en-vista'); }
     }
   }
   var subnav = document.getElementById('subnav');
